@@ -24,6 +24,14 @@
 | 7 | [Decisiones pendientes](docs/07-decisiones-pendientes.md) | Lo que tenemos que definir entre los dos (con sugerencias) |
 | 8 | [Caso Elásticos Lioy](docs/08-caso-elasticos-lioy.md) | Plantilla del primer caso de éxito, para completar con números |
 
+## Presentación comercial
+
+[`presentacion/index.html`](presentacion/index.html) es una presentación animada con los servicios, la experiencia y los casos de éxito, sin precios. Se abre en cualquier navegador.
+
+- **En la computadora** funciona como diapositivas. Se avanza con las flechas ← →, con la regla de abajo o con la rueda del mouse, y la tecla F pone pantalla completa.
+- **En el celular** se ve como una página que se desplaza.
+- Para ir directo a una diapositiva, agregá su nombre al link, por ejemplo `#caso-lioy` o `#servicios`.
+
 ## Próximos pasos (esta semana)
 
 1. Leer todo y marcar lo que no cierra o falta.
