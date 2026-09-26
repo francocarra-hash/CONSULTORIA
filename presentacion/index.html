@@ -4,156 +4,152 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Franco Carra Ecommerce</title>
-<meta name="description" content="Franco Carra: gestión de ecommerce para PyMEs en Mercado Libre, Tiendanube, Google Ads e Instagram. Experiencia y casos de éxito.">
+<meta name="description" content="Franco Carra: consultoría de ecommerce y negocios. Estrategia, procesos y rentabilidad en Mercado Libre, Tiendanube, Shopify y publicidad digital.">
 <meta property="og:title" content="Franco Carra · Ecommerce y negocios">
-<meta property="og:description" content="Hago crecer las ventas online de tu PyME: Mercado Libre, Tiendanube, Google Ads e Instagram.">
+<meta property="og:description" content="Asesoro a marcas y PyMEs para vender más y mejor online.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 <style>
 :root{
-  --paper:#EEF0EC; --card:#F6F7F4;
-  --ink:#15191B; --ink-2:#4A5357; --rule:#CBD1CD;
-  --accent:#EC4E0C; --accent-ink:#B93A0A;
-  --night:#121517; --on-night:#EEF0EC; --on-night-2:#A4ADB1; --on-night-rule:#2D3336;
-  --grid-strong:rgba(21,25,27,.075); --grid-faint:rgba(21,25,27,.035);
-  --f-sans:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
-  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  color-scheme:dark;
+  --bg:#0E1113; --bg-deep:#0A0C0E; --card:#171C1F; --line:#252C30; --line-2:#343C41;
+  --text:#ECEFEC; --text-2:#A7B0B4; --text-3:#7E888D;
+  --accent:#FF6A2B; --accent-hi:#FF8A57; --glow:rgba(255,106,43,.14);
+  --grid-strong:rgba(236,239,236,.05); --grid-faint:rgba(236,239,236,.022);
+  --f-sans:"Poppins","Helvetica Neue",Helvetica,Arial,sans-serif;
   --ease:cubic-bezier(.2,.75,.2,1); --ease-io:cubic-bezier(.7,0,.3,1);
   --gx:max(20px,5vw); --bar-h:64px; --ruler-h:68px;
-  --fs-display:clamp(38px,9.4vw,64px); --fs-h2:clamp(28px,6.8vw,44px); --fs-h3:19px;
-  --fs-lead:clamp(17px,4.4vw,20px); --fs-body:15.5px; --fs-label:12px;
-  --fs-hero:clamp(68px,20vw,132px); --fs-num2:clamp(44px,12vw,76px);
-  --chrome-bg:var(--paper); --chrome-ink:var(--ink); --chrome-muted:var(--ink-2);
-  --chrome-rule:var(--rule); --chrome-tick:#9AA3A0;
-}
-:root[data-tone="night"]{
-  --chrome-bg:var(--night); --chrome-ink:var(--on-night); --chrome-muted:var(--on-night-2);
-  --chrome-rule:var(--on-night-rule); --chrome-tick:#4A5358;
+  --fs-display:clamp(34px,8.6vw,60px); --fs-h2:clamp(26px,6.4vw,42px); --fs-h3:18px;
+  --fs-lead:clamp(16px,4.2vw,19px); --fs-body:15px; --fs-label:12px;
+  --fs-hero:clamp(62px,18vw,124px); --fs-num2:clamp(40px,11vw,72px);
 }
 html.deck{
   --u:min(1vw,1.72vh);
   --gx:clamp(32px,6vw,112px);
-  --fs-display:clamp(40px,calc(var(--u)*6.4),120px);
-  --fs-h2:clamp(30px,calc(var(--u)*4),72px);
-  --fs-h3:clamp(17px,calc(var(--u)*1.75),30px);
-  --fs-lead:clamp(16px,calc(var(--u)*1.75),28px);
-  --fs-body:clamp(14px,calc(var(--u)*1.35),22px);
-  --fs-label:clamp(12px,calc(var(--u)*.95),15px);
-  --fs-hero:clamp(84px,calc(var(--u)*12.5),210px);
-  --fs-num2:clamp(44px,calc(var(--u)*5.6),100px);
+  --fs-display:clamp(38px,calc(var(--u) * 5.6),108px);
+  --fs-h2:clamp(28px,calc(var(--u) * 3.7),66px);
+  --fs-h3:clamp(16px,calc(var(--u) * 1.6),28px);
+  --fs-lead:clamp(15px,calc(var(--u) * 1.6),26px);
+  --fs-body:clamp(13.5px,calc(var(--u) * 1.25),21px);
+  --fs-label:clamp(11.5px,calc(var(--u) * .9),15px);
+  --fs-hero:clamp(80px,calc(var(--u) * 11),190px);
+  --fs-num2:clamp(40px,calc(var(--u) * 5.2),92px);
 }
 
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
-h1,h2,h3,p,ul,ol,dl,dd{margin:0}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--f-sans);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
 ul,ol{padding:0;list-style:none}
 a{color:inherit}
+img{max-width:100%}
 button{font:inherit;color:inherit}
 [hidden]{display:none!important}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
 .sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 
 /* ---------- Type ---------- */
-.eyebrow{display:flex;align-items:center;gap:12px;font-family:var(--f-mono);font-size:var(--fs-label);font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:var(--fs-label);font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--text-2)}
 .eyebrow::before{content:"";flex:none;width:28px;height:2px;background:var(--accent)}
-.display{font-size:var(--fs-display);font-weight:650;font-stretch:112%;line-height:1.02;letter-spacing:-.028em;max-width:14.5ch;text-wrap:balance}
-.h2{font-size:var(--fs-h2);font-weight:620;font-stretch:108%;line-height:1.06;letter-spacing:-.022em;max-width:24ch;text-wrap:balance}
-.h3{font-size:var(--fs-h3);font-weight:620;font-stretch:104%;line-height:1.22;letter-spacing:-.008em}
-.lead{font-size:var(--fs-lead);line-height:1.45;color:var(--ink-2);max-width:46ch;text-wrap:pretty}
-.body{font-size:var(--fs-body);line-height:1.5;color:var(--ink-2);text-wrap:pretty}
-.mark{background-image:linear-gradient(var(--accent),var(--accent));background-repeat:no-repeat;background-size:100% .085em;background-position:0 94%;-webkit-box-decoration-break:clone;box-decoration-break:clone}
-[data-split] .w{display:inline-block;padding:.16em .04em .14em;margin:-.16em -.04em -.14em;clip-path:inset(0)}
+.display{font-size:var(--fs-display);font-weight:600;line-height:1.06;letter-spacing:-.035em;max-width:16ch;text-wrap:balance}
+.h2{font-size:var(--fs-h2);font-weight:600;line-height:1.12;letter-spacing:-.028em;max-width:24ch;text-wrap:balance}
+.h3{font-size:var(--fs-h3);font-weight:600;line-height:1.28;letter-spacing:-.012em}
+.lead{font-size:var(--fs-lead);line-height:1.55;color:var(--text-2);max-width:46ch;text-wrap:pretty}
+.body{font-size:var(--fs-body);line-height:1.6;color:var(--text-2);text-wrap:pretty}
+.mark{background-image:linear-gradient(var(--accent),var(--accent));background-repeat:no-repeat;background-size:100% .08em;background-position:0 94%;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+[data-split] .w{display:inline-block;padding:.22em .04em .2em;margin:-.22em -.04em -.2em;clip-path:inset(0)}
 [data-split] .wi{display:inline-block}
 [data-split] .wi.mark{background-position:0 100%}
 
 /* ---------- Top bar ---------- */
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px;padding-inline:var(--gx);border-bottom:1px solid var(--rule);color:var(--chrome-ink)}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px;padding-inline:var(--gx);background:var(--bg);border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:12px;min-width:0;text-decoration:none}
-.brand-mark{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:3px;background:var(--chrome-ink);color:var(--chrome-bg);font-weight:700;font-stretch:118%;font-size:13px;letter-spacing:.02em;transition:background-color .5s var(--ease),color .5s var(--ease)}
-.brand-name{font-weight:620;font-stretch:110%;font-size:15px;white-space:nowrap}
-.brand-tag{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--chrome-muted);white-space:nowrap}
-.where{display:none;align-items:center;gap:14px;font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--chrome-muted);white-space:nowrap}
-.where b{font-weight:500;color:var(--chrome-ink)}
+.brand-mark{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:6px;background:var(--text);color:var(--bg);font-weight:700;font-size:13px;letter-spacing:.02em}
+.brand-name{font-weight:600;font-size:15px;white-space:nowrap}
+.brand-tag{font-size:11.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2);white-space:nowrap}
+.where{display:none;align-items:center;gap:14px;font-size:11.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2);white-space:nowrap}
+.where b{font-weight:600;color:var(--text)}
 @media (max-width:520px){.brand-tag{display:none}}
 
 /* ---------- Slides: page flow (phones, narrow windows, no JS) ---------- */
-.slide{position:relative;overflow:hidden;background:var(--paper);color:var(--ink);padding-block:64px;padding-inline:var(--gx);border-top:1px solid var(--rule)}
+.slide{position:relative;overflow:hidden;background:var(--bg);padding-block:64px;padding-inline:var(--gx);border-top:1px solid var(--line)}
 .slide:first-child{border-top:0}
-.slide-night{background:var(--night);color:var(--on-night);border-top-color:var(--night)}
+.slide-case{background:var(--bg-deep)}
 .slide-inner{position:relative;max-width:1320px;margin-inline:auto;display:flex;flex-direction:column;gap:28px}
 .slide-head{display:flex;flex-direction:column;gap:16px}
 .slide-body{display:flex;flex-direction:column;gap:clamp(24px,4vh,48px)}
-.slide-night .eyebrow,.slide-night .lead,.slide-night .body{color:var(--on-night-2)}
 
 /* ---------- Slides: presentation mode ---------- */
 html.deck,html.deck body{height:100%;overflow:hidden}
-html.deck .slides{position:fixed;inset:0;background:var(--chrome-bg);transition:background-color .6s var(--ease)}
+html.deck .slides{position:fixed;inset:0;background:var(--bg)}
 html.deck .slide{position:absolute;inset:0;border:0;display:flex;flex-direction:column;padding:calc(var(--bar-h) + env(safe-area-inset-top,0px) + 1.5vh) var(--gx) calc(var(--ruler-h) + env(safe-area-inset-bottom,0px) + 1.5vh);overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none;opacity:0;visibility:hidden;transition:opacity 0s linear .6s,visibility 0s linear .6s}
 html.deck .slide::-webkit-scrollbar{display:none}
 html.deck .slide.is-active{opacity:1;visibility:visible;z-index:2;transition:opacity .6s var(--ease)}
 html.deck .slide-inner{width:100%;flex:1 0 auto;gap:0}
 html.deck .slide-body{flex:1 0 auto;justify-content:center;padding-block:clamp(20px,3.2vh,48px)}
 html.deck .slide-center .slide-inner{justify-content:center;gap:clamp(18px,3.4vh,36px)}
-html.deck .h2{max-width:28ch}
-html.deck .topbar{position:fixed;top:0;left:0;right:0;z-index:5;height:calc(var(--bar-h) + env(safe-area-inset-top,0px));padding-block:env(safe-area-inset-top,0px) 0;border-bottom:0;background:transparent;transition:color .5s var(--ease)}
+html.deck .h2{max-width:34ch}
+html.deck .topbar{position:fixed;top:0;left:0;right:0;z-index:5;height:calc(var(--bar-h) + env(safe-area-inset-top,0px));padding-block:env(safe-area-inset-top,0px) 0;border-bottom:0;background:transparent}
 html.deck .where{display:flex}
 
 /* ---------- Cover & contact ---------- */
-.grid-bg{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,var(--grid-strong) 1px,transparent 1px),linear-gradient(to bottom,var(--grid-strong) 1px,transparent 1px),linear-gradient(to right,var(--grid-faint) 1px,transparent 1px),linear-gradient(to bottom,var(--grid-faint) 1px,transparent 1px);background-size:80px 80px,80px 80px,16px 16px,16px 16px;background-position:-1px -1px;-webkit-mask-image:radial-gradient(120% 95% at 88% 12%,#000 0%,rgba(0,0,0,.55) 42%,transparent 78%);mask-image:radial-gradient(120% 95% at 88% 12%,#000 0%,rgba(0,0,0,.55) 42%,transparent 78%)}
+.grid-bg{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(60% 55% at 92% 8%,var(--glow),transparent 70%),linear-gradient(to right,var(--grid-strong) 1px,transparent 1px),linear-gradient(to bottom,var(--grid-strong) 1px,transparent 1px),linear-gradient(to right,var(--grid-faint) 1px,transparent 1px),linear-gradient(to bottom,var(--grid-faint) 1px,transparent 1px);background-size:auto,80px 80px,80px 80px,16px 16px,16px 16px;background-position:0 0,-1px -1px,-1px -1px,-1px -1px,-1px -1px;-webkit-mask-image:radial-gradient(120% 95% at 88% 12%,#000 0%,rgba(0,0,0,.6) 42%,transparent 80%);mask-image:radial-gradient(120% 95% at 88% 12%,#000 0%,rgba(0,0,0,.6) 42%,transparent 80%)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips li{font-family:var(--f-mono);font-size:var(--fs-label);font-weight:500;letter-spacing:.03em;line-height:1.2;padding:.62em .9em;border:1px solid var(--rule);border-radius:3px;background:var(--card);color:var(--ink)}
-.slide-night .chips li{background:transparent;border-color:var(--on-night-rule);color:var(--on-night)}
-.hint{display:none;align-items:center;gap:8px;font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+.chips li{font-size:var(--fs-label);font-weight:500;letter-spacing:.02em;line-height:1.2;padding:.66em 1em;border:1px solid var(--line-2);border-radius:999px;color:var(--text)}
+.hint{display:none;align-items:center;gap:8px;font-size:11.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--text-2)}
 html.deck .hint{display:flex}
 .hint-keys{display:inline-flex;align-items:center;gap:8px}
 .hint-touch{display:none}
 @media (pointer:coarse){.hint-keys{display:none}.hint-touch{display:inline}}
-.kbd{display:inline-grid;place-items:center;min-width:28px;height:28px;padding:0 6px;border:1px solid var(--rule);border-bottom-width:2px;border-radius:4px;background:var(--card);color:var(--ink);font-size:13px;letter-spacing:0}
+.kbd{display:inline-grid;place-items:center;min-width:28px;height:28px;padding:0 6px;border:1px solid var(--line-2);border-bottom-width:2px;border-radius:6px;background:var(--card);color:var(--text);font-size:13px;letter-spacing:0}
 .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
-.btn{display:inline-flex;align-items:center;gap:12px;padding:16px 22px;border-radius:3px;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:600;font-stretch:106%;font-size:var(--fs-body);transition:background-color .3s var(--ease)}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:15px 22px;border-radius:999px;background:var(--accent);color:var(--bg);text-decoration:none;font-weight:600;font-size:var(--fs-body);transition:background-color .3s var(--ease)}
 .btn svg{width:18px;height:18px;transition:transform .3s var(--ease)}
-.btn:hover{background:var(--accent-ink)}
+.btn:hover{background:var(--accent-hi)}
 .btn:hover svg{transform:translate(2px,-2px)}
-.url{font-family:var(--f-mono);font-size:var(--fs-label);letter-spacing:.04em;color:var(--ink-2);user-select:all;-webkit-user-select:all}
-.sign-off{display:flex;align-items:center;gap:12px;font-size:var(--fs-body);color:var(--ink-2)}
+.url{font-size:var(--fs-label);letter-spacing:.02em;color:var(--text-2);user-select:all;-webkit-user-select:all}
+.sign-off{display:flex;align-items:center;gap:12px;font-size:var(--fs-body);color:var(--text-2)}
 
-/* ---------- About ---------- */
+/* ---------- About & skills ---------- */
 .about-grid,.split{display:grid;gap:32px;grid-template-columns:minmax(0,1fr)}
 .about-copy{display:flex;flex-direction:column;gap:18px}
-.spec-title{font-family:var(--f-mono);font-size:var(--fs-label);font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);padding-bottom:12px;border-bottom:1.5px solid var(--ink)}
-.spec-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.25fr);gap:6px 24px;align-items:baseline;padding-block:clamp(9px,1.6vh,16px);border-bottom:1px solid var(--rule)}
-.spec-row dt{font-size:var(--fs-h3);font-weight:620;font-stretch:104%;line-height:1.25}
-.spec-row dd{font-size:var(--fs-body);line-height:1.45;color:var(--ink-2)}
-.spec-note{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding-top:14px;font-size:var(--fs-body);color:var(--ink-2)}
-.spec-note b{font-family:var(--f-mono);font-size:var(--fs-label);font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink)}
+.spec-title,.skill-title{font-size:var(--fs-label);font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding-bottom:12px;border-bottom:1.5px solid var(--text)}
+.spec-title{color:var(--text-2)}
+.skill-title{color:var(--accent)}
+.spec-row{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.25fr);gap:6px 24px;align-items:baseline;padding-block:clamp(9px,1.55vh,16px);border-bottom:1px solid var(--line)}
+.spec-row dt{font-size:var(--fs-h3);font-weight:600;line-height:1.3}
+.spec-row dd{font-size:var(--fs-body);line-height:1.5;color:var(--text-2)}
+.tag{display:inline-block;margin-left:8px;padding:.3em .7em;border-radius:999px;background:var(--glow);color:var(--accent);font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;vertical-align:.25em;line-height:1.2}
+.skills{display:grid;gap:28px;grid-template-columns:minmax(0,1fr)}
+.skill-list li{font-size:var(--fs-h3);font-weight:500;line-height:1.3;padding-block:clamp(10px,1.7vh,16px);border-bottom:1px solid var(--line)}
+.skill-list li span{display:block;margin-top:2px;font-size:var(--fs-body);font-weight:400;color:var(--text-2)}
 @media (max-width:520px){.spec-row{grid-template-columns:minmax(0,1fr)}}
 @media (min-width:760px){
   .about-grid{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,5vw,96px);align-items:start}
   .split{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,96px);align-items:start}
+  .skills{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,56px)}
 }
 
 /* ---------- Checklist (problems) & points (strengths) ---------- */
-.checklist{display:flex;flex-direction:column;border-top:1.5px solid var(--ink)}
+.checklist{display:flex;flex-direction:column;border-top:1.5px solid var(--text)}
 .check,.point{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 16px}
-.check{padding-block:clamp(12px,1.9vh,20px);border-bottom:1px solid var(--rule)}
-.box{grid-row:span 2;position:relative;width:.9em;height:.9em;margin-top:.2em;border-radius:2px;font-size:var(--fs-h3)}
-.check .box{border:1.5px solid var(--ink-2)}
+.check{padding-block:clamp(12px,1.9vh,20px);border-bottom:1px solid var(--line)}
+.box{grid-row:span 2;position:relative;width:.9em;height:.9em;margin-top:.24em;border-radius:3px;font-size:var(--fs-h3)}
+.check .box{border:1.5px solid var(--text-3)}
 .point .box{background:var(--accent)}
-.point .box::after{content:"";position:absolute;left:.3em;top:.12em;width:.22em;height:.46em;border:solid var(--paper);border-width:0 .09em .09em 0;transform:rotate(45deg)}
+.point .box::after{content:"";position:absolute;left:.3em;top:.12em;width:.22em;height:.46em;border:solid var(--bg);border-width:0 .09em .09em 0;transform:rotate(45deg)}
 .points{display:grid;gap:clamp(20px,3.4vh,40px) clamp(24px,4vw,64px);grid-template-columns:minmax(0,1fr)}
-.point{padding-top:clamp(12px,1.8vh,18px);border-top:1.5px solid var(--ink)}
+.point{padding-top:clamp(12px,1.8vh,18px);border-top:1.5px solid var(--text)}
 @media (min-width:640px){.points{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 /* ---------- Services ---------- */
 .cards{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
-.card{display:flex;flex-direction:column;gap:clamp(8px,1.2vh,14px);padding:clamp(16px,2.2vh,28px) clamp(16px,1.6vw,26px);background:var(--card);border:1px solid var(--rule);border-radius:4px;transition:border-color .35s var(--ease),transform .35s var(--ease),box-shadow .35s var(--ease)}
+.card{display:flex;flex-direction:column;gap:clamp(8px,1.2vh,14px);padding:clamp(16px,2.2vh,28px) clamp(16px,1.6vw,26px);background:var(--card);border:1px solid var(--line);border-radius:10px;transition:border-color .35s var(--ease),transform .35s var(--ease)}
 .card-top{display:flex;align-items:center;gap:12px}
-.ico{flex:none;width:clamp(22px,1.9vw,30px);height:clamp(22px,1.9vw,30px);color:var(--ink);transition:color .35s var(--ease)}
+.ico{flex:none;width:clamp(22px,1.9vw,30px);height:clamp(22px,1.9vw,30px);color:var(--accent)}
 .ico svg{display:block;width:100%;height:100%}
-.card:hover{border-color:var(--ink);transform:translateY(-3px);box-shadow:0 12px 26px -20px rgba(21,25,27,.55)}
-.card:hover .ico{color:var(--accent-ink)}
+.card:hover{border-color:var(--line-2);transform:translateY(-3px)}
 @media (min-width:600px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (min-width:1000px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
 html.deck .cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.3vw,20px)}
@@ -162,51 +158,63 @@ html.deck .cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.
 .steps{--sg:clamp(16px,2vw,32px);position:relative}
 .steps-list{display:grid;gap:28px;grid-template-columns:minmax(0,1fr)}
 .step{position:relative;display:flex;flex-direction:column;gap:10px;padding-top:34px}
-.step-dot{position:absolute;top:0;left:0;width:14px;height:14px;border-radius:50%;background:var(--paper);border:2px solid var(--ink)}
-.step-n{font-family:var(--f-mono);font-size:var(--fs-label);font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink)}
+.step-dot{position:absolute;top:0;left:0;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--text)}
+.step-n{font-size:var(--fs-label);font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
 .steps-track{display:none}
 @media (min-width:760px){
   .steps-list{grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--sg)}
-  .steps-track{display:block;position:absolute;top:6px;left:0;height:2px;width:calc((100% + var(--sg)) * .75);background:var(--rule)}
-  .steps-fill{position:absolute;inset:0;background:var(--ink);transform-origin:left}
+  .steps-track{display:block;position:absolute;top:6px;left:0;height:2px;width:calc((100% + var(--sg)) * .75);background:var(--line-2)}
+  .steps-fill{position:absolute;inset:0;background:var(--text);transform-origin:left}
 }
 
 /* ---------- Cases ---------- */
-.case-sub{font-size:var(--fs-lead);line-height:1.45;color:var(--on-night-2);max-width:48ch}
+.case-grid{display:grid;gap:40px;grid-template-columns:minmax(0,1fr)}
+.case-main{display:flex;flex-direction:column;gap:28px}
+.case-sub{font-size:var(--fs-lead);line-height:1.5;color:var(--text-2);max-width:44ch}
 .figs{display:flex;flex-wrap:wrap;align-items:flex-end;gap:28px clamp(24px,3.5vw,64px)}
+.figs-col{flex-direction:column;align-items:flex-start;gap:0}
+.figs-col .fig+.fig{margin-top:clamp(18px,3vh,32px);padding-top:clamp(18px,3vh,32px);border-top:1px solid var(--line-2)}
 .fig{display:flex;flex-direction:column;gap:clamp(8px,1.3vh,14px);min-width:0}
-.fig-label,.case-foot .label{font-family:var(--f-mono);font-size:var(--fs-label);font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--on-night-2)}
-.fig-value{font-size:var(--fs-hero);font-weight:640;font-stretch:115%;line-height:.88;letter-spacing:-.04em;color:var(--on-night);white-space:nowrap}
+.fig-label,.case-foot .label{font-size:var(--fs-label);font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--text-2)}
+.fig-value{font-size:var(--fs-hero);font-weight:600;line-height:.95;letter-spacing:-.045em;color:var(--text);white-space:nowrap}
 .fig-value .sign{color:var(--accent);margin-right:.03em}
-.fig-value .unit{font-size:.62em;letter-spacing:-.02em;margin-left:.05em}
+.fig-value .unit{font-size:.62em;letter-spacing:-.02em;margin-left:.04em}
 .fig-small .fig-value{font-size:var(--fs-num2)}
-.fig-before .fig-value{color:var(--on-night-2)}
-.fig-cap{font-size:var(--fs-body);line-height:1.4;color:var(--on-night-2);max-width:27ch}
+.fig-before .fig-value{color:var(--text-2)}
+.fig-cap{font-size:var(--fs-body);line-height:1.45;color:var(--text-2);max-width:28ch}
 .fig-arrow{display:none}
-.fig-sep{display:none}
 .case-foot{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px}
+.case-media{display:flex;justify-content:center;align-items:center;padding-block:8px;background:radial-gradient(closest-side,var(--glow),transparent)}
+.device{display:flex;flex-direction:column;align-items:center;gap:14px}
+.device figcaption{font-size:var(--fs-label);font-weight:500;letter-spacing:.06em;color:var(--text-2)}
+.phone{--pw:clamp(200px,62vw,260px);--pp:calc(var(--pw) * .034);position:relative;flex:none;width:var(--pw);height:calc((var(--pw) - 2 * var(--pp)) * 2.1727 + 2 * var(--pp));padding:var(--pp);border-radius:calc(var(--pw) * .17);background:linear-gradient(150deg,#3A4247 0%,#1B2023 40%,#0C0F11 100%);box-shadow:inset 0 0 0 1px rgba(255,255,255,.09),0 40px 80px -30px rgba(0,0,0,.9)}
+.phone::after{content:"";position:absolute;left:50%;top:calc(var(--pp) + var(--pw) * .026);width:calc(var(--pw) * .28);height:calc(var(--pw) * .078);transform:translateX(-50%);border-radius:999px;background:#040506}
+.phone-screen{width:100%;height:100%;overflow:hidden;border-radius:calc(var(--pw) * .14);background:#fff}
+.phone-screen img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
 @media (min-width:600px){
-  .fig-arrow{display:block;position:relative;align-self:center;flex:1 1 80px;min-width:60px;max-width:240px;height:16px}
+  .fig-arrow{display:block;position:relative;align-self:center;flex:1 1 80px;min-width:60px;max-width:220px;height:16px}
   .fig-arrow::before{content:"";position:absolute;left:0;right:2px;top:7px;height:2px;background:var(--accent)}
   .fig-arrow::after{content:"";position:absolute;right:2px;top:3px;width:10px;height:10px;border-top:2px solid var(--accent);border-right:2px solid var(--accent);transform:rotate(45deg)}
-  .fig-sep{display:block;align-self:stretch;width:1px;background:var(--on-night-rule)}
 }
+html.deck .case-grid{flex:1 0 auto;grid-template-columns:minmax(0,1fr) auto;align-items:stretch;gap:clamp(32px,4vw,80px)}
+html.deck .case-main{gap:0}
+html.deck .phone{--pw:clamp(170px,min(20vw,calc((100vh - var(--bar-h) - var(--ruler-h) - 12vh - 32px) * .46)),330px)}
 
 /* ---------- Ruler (progress) ---------- */
 .ruler{display:none}
-html.deck .ruler{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;align-items:flex-end;gap:clamp(16px,2.5vw,40px);height:calc(var(--ruler-h) + env(safe-area-inset-bottom,0px));padding:0 var(--gx) calc(14px + env(safe-area-inset-bottom,0px));color:var(--chrome-ink);transition:color .5s var(--ease)}
+html.deck .ruler{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;align-items:flex-end;gap:clamp(16px,2.5vw,40px);height:calc(var(--ruler-h) + env(safe-area-inset-bottom,0px));padding:0 var(--gx) calc(14px + env(safe-area-inset-bottom,0px))}
 .scale{position:relative;flex:1;height:40px;margin-inline:18px}
-.scale::before{content:"";position:absolute;left:0;right:0;bottom:16px;height:7px;background-image:repeating-linear-gradient(to right,var(--chrome-tick) 0 1px,transparent 1px 10px)}
-.scale::after{content:"";position:absolute;left:0;right:0;bottom:16px;height:1px;background:var(--chrome-rule)}
+.scale::before{content:"";position:absolute;left:0;right:0;bottom:16px;height:7px;background-image:repeating-linear-gradient(to right,var(--line-2) 0 1px,transparent 1px 10px)}
+.scale::after{content:"";position:absolute;left:0;right:0;bottom:16px;height:1px;background:var(--line-2)}
 .scale-fill{position:absolute;left:0;bottom:16px;z-index:1;height:2px;width:calc(var(--x,0) * 100%);background:var(--accent);transition:width .8s var(--ease)}
-.marker{position:absolute;bottom:13px;z-index:2;left:calc(var(--x,0) * 100%);width:3px;height:24px;margin-left:-1.5px;border-radius:1px;background:var(--accent);transition:left .8s var(--ease)}
-.tick{position:absolute;bottom:0;left:calc(var(--x) * 100%);width:40px;height:40px;margin-left:-20px;padding:0;border:0;background:none;cursor:pointer;color:var(--chrome-muted);font-family:var(--f-mono);font-size:12px;font-weight:500;letter-spacing:.04em;transition:color .3s}
+.marker{position:absolute;bottom:13px;z-index:2;left:calc(var(--x,0) * 100%);width:3px;height:24px;margin-left:-1.5px;border-radius:2px;background:var(--accent);transition:left .8s var(--ease)}
+.tick{position:absolute;bottom:0;left:calc(var(--x) * 100%);width:40px;height:40px;margin-left:-20px;padding:0;border:0;background:none;cursor:pointer;color:var(--text-3);font-size:11.5px;font-weight:500;letter-spacing:.04em;transition:color .3s}
 .tick::before{content:"";position:absolute;left:50%;bottom:16px;width:1px;height:15px;background:currentColor}
 .tick span{position:absolute;left:0;right:0;bottom:0;text-align:center;line-height:1}
-.tick:hover,.tick[aria-current="true"]{color:var(--chrome-ink)}
+.tick:hover,.tick[aria-current="true"]{color:var(--text)}
 .ctrls{display:flex;gap:8px;padding-bottom:3px}
-.ctrl{display:grid;place-items:center;width:38px;height:38px;padding:0;border:1px solid var(--chrome-rule);border-radius:3px;background:transparent;color:var(--chrome-ink);cursor:pointer;transition:border-color .3s,opacity .3s}
-.ctrl:hover{border-color:var(--chrome-ink)}
+.ctrl{display:grid;place-items:center;width:38px;height:38px;padding:0;border:1px solid var(--line-2);border-radius:999px;background:transparent;color:var(--text);cursor:pointer;transition:border-color .3s,opacity .3s}
+.ctrl:hover{border-color:var(--text-2)}
 .ctrl:disabled{opacity:.35;cursor:default}
 .ctrl svg{width:18px;height:18px}
 
@@ -216,21 +224,26 @@ html.deck .ruler{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;a
   html.deck .slide.is-active [data-split] .wi,html.flow .slide-cover [data-split] .wi{animation:word .95s var(--ease) both;animation-delay:calc(120ms + var(--k,0) * 85ms + var(--wi,0) * 42ms)}
   html.deck .slide.is-active [data-split] .wi.mark,html.flow .slide-cover [data-split] .wi.mark{animation:word .95s var(--ease) both,mark 1.1s var(--ease-io) both;animation-delay:calc(120ms + var(--k,0) * 85ms + var(--wi,0) * 42ms),calc(760ms + var(--k,0) * 85ms + var(--wi,0) * 42ms)}
   html.deck .slide.is-active [data-stagger]>*,html.flow .slide-cover [data-stagger]>*{animation:rise .75s var(--ease) both;animation-delay:calc(120ms + var(--k,0) * 85ms + var(--c,0) * 70ms)}
-  html.deck .slide.is-active .grid-bg,html.flow .slide-cover .grid-bg{animation:grid-in 1.8s var(--ease) both}
+  html.deck .slide.is-active .grid-bg,html.flow .slide-cover .grid-bg{animation:fade-in 1.8s var(--ease) both}
   html.deck .slide.is-active .steps-fill{animation:fill-x 1.5s var(--ease-io) both;animation-delay:.6s}
   html.deck .slide.is-active .step-dot{animation:pop .55s var(--ease) both;animation-delay:calc(.6s + var(--i,0) * .46s)}
   html.deck .slide.is-active .fig-arrow{animation:draw-x .9s var(--ease-io) both;animation-delay:.75s}
+  html.deck .slide.is-active .case-media{animation:fade-in 1.4s var(--ease) both;animation-delay:.2s}
+  html.deck .slide.is-active .phone{animation:phone-in 1.1s var(--ease) both;animation-delay:.3s}
+  html.deck .slide.is-active .phone-screen img{animation:screen-in 1s var(--ease-io) both;animation-delay:.75s}
 }
 @media (prefers-reduced-motion:reduce){
   html.deck .slide,html.deck .slide.is-active,.scale-fill,.marker{transition:none}
 }
 @keyframes rise{from{opacity:0;transform:translate3d(0,calc(var(--dir,1) * 24px),0)}to{opacity:1;transform:none}}
 @keyframes word{from{transform:translate3d(0,calc(var(--dir,1) * 112%),0)}to{transform:none}}
-@keyframes mark{from{background-size:0% .085em}to{background-size:100% .085em}}
-@keyframes grid-in{from{opacity:0;transform:scale(1.035)}to{opacity:1;transform:none}}
+@keyframes mark{from{background-size:0% .08em}to{background-size:100% .08em}}
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
 @keyframes fill-x{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @keyframes pop{0%{transform:scale(0)}70%{transform:scale(1.2)}100%{transform:scale(1)}}
 @keyframes draw-x{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes phone-in{from{opacity:0;transform:translate3d(0,56px,0) rotate(4deg)}to{opacity:1;transform:none}}
+@keyframes screen-in{from{clip-path:inset(0 0 100% 0)}to{clip-path:inset(0 0 0 0)}}
 </style>
 </head>
 <body>
@@ -241,7 +254,7 @@ html.deck .ruler{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;a
     <span class="brand-name">Franco Carra</span>
     <span class="brand-tag">Ecommerce y negocios</span>
   </a>
-  <p class="where" aria-live="polite"><span id="where-label">Inicio</span><b id="where-count">01 / 09</b></p>
+  <p class="where" aria-live="polite"><span id="where-label">Inicio</span><b id="where-count">01 / 10</b></p>
 </header>
 
 <main class="slides">
@@ -250,13 +263,14 @@ html.deck .ruler{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;a
     <div class="grid-bg" aria-hidden="true"></div>
     <div class="slide-inner">
       <p class="eyebrow" data-anim>Consultoría de ecommerce y negocios</p>
-      <h1 class="display" data-split>Hago crecer las <span class="mark">ventas online</span> de tu PyME.</h1>
-      <p class="lead" data-anim>Gestiono tu ecommerce de punta a punta para que vendas más y cada venta te deje plata.</p>
-      <ul class="chips" data-stagger aria-label="Canales">
+      <h1 class="display" data-split>Asesoro a marcas y PyMEs para <span class="mark">vender más y mejor</span> online.</h1>
+      <p class="lead" data-anim>Estrategia, procesos y números para que tu equipo trabaje mejor y cada venta deje más margen.</p>
+      <ul class="chips" data-stagger aria-label="Plataformas y publicidad">
         <li>Mercado Libre</li>
         <li>Tiendanube</li>
+        <li>Shopify</li>
         <li>Google Ads</li>
-        <li>Instagram</li>
+        <li>Meta Ads</li>
       </ul>
       <p class="hint" data-anim>
         <span class="hint-keys"><span class="kbd" aria-hidden="true">←</span><span class="kbd" aria-hidden="true">→</span> para avanzar</span>
@@ -274,18 +288,56 @@ html.deck .ruler{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;a
       <div class="slide-body">
         <div class="about-grid">
           <div class="about-copy">
-            <p class="lead" data-anim>Soy Franco Carra. Trabajé en una consultora de Mercado Libre y gestioné el ecommerce de un importador de herramientas, de una ferretería y de una empresa de repuestos para camiones.</p>
-            <p class="body" data-anim>Conozco lo que hay detrás de cada venta: stock, precios, publicaciones, reclamos, envíos y márgenes. Hoy trabajo de forma independiente con PyMEs que quieren vender más online.</p>
+            <p class="lead" data-anim>Soy Franco Carra, DTC Lead en SodaStream. Antes trabajé en una consultora de Mercado Libre y gestioné el ecommerce de un importador de herramientas, de una ferretería y de una empresa de repuestos para camiones.</p>
+            <p class="body" data-anim>Conozco lo que hay detrás de cada venta: stock, precios, publicidad, reclamos, envíos y márgenes. Con esa experiencia asesoro a empresas que quieren vender más y mejor online.</p>
           </div>
           <div class="spec">
             <p class="spec-title" data-anim>Experiencia</p>
             <dl data-stagger>
-              <div class="spec-row"><dt>Impexpro</dt><dd>Gestión de cuentas de ecommerce de un importador de herramientas</dd></div>
+              <div class="spec-row"><dt>SodaStream <span class="tag">Actual</span></dt><dd>DTC Lead · Venta directa al consumidor</dd></div>
+              <div class="spec-row"><dt>Impexpro</dt><dd>Ecommerce de un importador de herramientas</dd></div>
               <div class="spec-row"><dt>Mercado Inteligente</dt><dd>Consultora para vendedores de Mercado Libre</dd></div>
               <div class="spec-row"><dt>Ferretería Don Roberto</dt><dd>Mercado Libre e Instagram</dd></div>
               <div class="spec-row"><dt>Elásticos Lioy</dt><dd>Tiendanube, Mercado Libre y Google Ads</dd></div>
             </dl>
-            <p class="spec-note" data-anim><b>Rubros</b> Ferretería, herramientas y repuestos</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide" id="especialidades" data-label="Especialidades">
+    <div class="slide-inner">
+      <header class="slide-head">
+        <p class="eyebrow" data-anim>Especialidades</p>
+        <h2 class="h2" data-split>Plataformas, publicidad y negocio.</h2>
+      </header>
+      <div class="slide-body">
+        <div class="skills">
+          <div class="skill-group">
+            <p class="skill-title" data-anim>Plataformas</p>
+            <ul class="skill-list" data-stagger>
+              <li>Shopify</li>
+              <li>Tiendanube</li>
+              <li>Mercado Libre</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <p class="skill-title" data-anim>Publicidad</p>
+            <ul class="skill-list" data-stagger>
+              <li>Google Ads</li>
+              <li>Meta Ads</li>
+              <li>Mercado Ads<span>Product Ads y DSP</span></li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <p class="skill-title" data-anim>Negocio</p>
+            <ul class="skill-list" data-stagger>
+              <li>Rentabilidad</li>
+              <li>Rotación de stock</li>
+              <li>Análisis de mercado<span>Competidores y oportunidades</span></li>
+              <li>Desarrollo de negocio y producto</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -295,17 +347,17 @@ html.deck .ruler{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;a
   <section class="slide" id="desafio" data-label="El problema">
     <div class="slide-inner">
       <header class="slide-head">
-        <p class="eyebrow" data-anim>Lo que veo en muchas PyMEs</p>
-        <h2 class="h2" data-split>Buen producto, pocas ventas online.</h2>
+        <p class="eyebrow" data-anim>Lo que veo en muchas empresas</p>
+        <h2 class="h2" data-split>Se trabaja mucho y se gana poco.</h2>
       </header>
       <div class="slide-body">
         <div class="split">
-          <p class="lead" data-anim>Lo veo seguido en empresas con años de trayectoria. Las causas casi siempre se repiten.</p>
+          <p class="lead" data-anim>Lo veo seguido en empresas que ya venden online. Las causas casi siempre se repiten.</p>
           <ul class="checklist" data-stagger>
-            <li class="check"><span class="box" aria-hidden="true"></span><h3 class="h3">Nadie a cargo</h3><p class="body">Lo online lo maneja quien puede, en los ratos libres y sin un plan.</p></li>
-            <li class="check"><span class="box" aria-hidden="true"></span><h3 class="h3">Publicaciones que no venden</h3><p class="body">Títulos flojos, fotos pobres y fichas técnicas incompletas.</p></li>
-            <li class="check"><span class="box" aria-hidden="true"></span><h3 class="h3">Reputación en riesgo</h3><p class="body">Preguntas sin responder, reclamos y demoras que bajan el termómetro.</p></li>
-            <li class="check"><span class="box" aria-hidden="true"></span><h3 class="h3">Precios sin números</h3><p class="body">Se vende, pero nadie sabe cuánto queda después de comisiones y envíos.</p></li>
+            <li class="check"><span class="box" aria-hidden="true"></span><h3 class="h3">Operación sin estrategia</h3><p class="body">Mucho trabajo diario, sin objetivos, prioridades ni un plan claro.</p></li>
+            <li class="check"><span class="box" aria-hidden="true"></span><h3 class="h3">Procesos que no escalan</h3><p class="body">Tareas manuales, errores de stock y un equipo que vive apagando incendios.</p></li>
+            <li class="check"><span class="box" aria-hidden="true"></span><h3 class="h3">Publicidad sin control</h3><p class="body">Se invierte en Mercado Ads, Google y Meta sin medir el retorno real.</p></li>
+            <li class="check"><span class="box" aria-hidden="true"></span><h3 class="h3">Precios y stock sin números</h3><p class="body">No se sabe cuánto deja cada venta ni qué productos inmovilizan plata.</p></li>
           </ul>
         </div>
       </div>
@@ -316,51 +368,51 @@ html.deck .ruler{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;a
     <div class="slide-inner">
       <header class="slide-head">
         <p class="eyebrow" data-anim>Qué hago</p>
-        <h2 class="h2" data-split>Me ocupo de cada canal y de los números.</h2>
+        <h2 class="h2" data-split>Asesoro y acompaño a tu equipo.</h2>
       </header>
       <div class="slide-body">
         <ul class="cards" data-stagger>
           <li class="card">
             <div class="card-top">
-              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5.5 8.5h13l-1 11.5h-11z"/><path d="M9 8.5V7a3 3 0 0 1 6 0v1.5"/></svg></span>
-              <h3 class="h3">Mercado Libre</h3>
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span>
+              <h3 class="h3">Diagnóstico y estrategia</h3>
             </div>
-            <p class="body">Publicaciones, reputación, precios, promociones, Mercado Ads y envíos Full y Flex.</p>
+            <p class="body">Auditoría de canales y números, con un plan de crecimiento priorizado.</p>
           </li>
           <li class="card">
             <div class="card-top">
-              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 10.5V20h15v-9.5"/><path d="M3.5 10.5 5.5 4h13l2 6.5"/><path d="M3.5 10.5c0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5c0 1.4 1.1 2.5 2.5 2.5h2c1.4 0 2.5-1.1 2.5-2.5 0 1.4 1.1 2.5 2.5 2.5s2.5-1.1 2.5-2.5"/><path d="M10 20v-4.5h4V20"/></svg></span>
-              <h3 class="h3">Tienda propia en Tiendanube</h3>
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4" width="6.5" height="5" rx="1.2"/><rect x="14" y="15" width="6.5" height="5" rx="1.2"/><path d="M6.8 9v4a2 2 0 0 0 2 2H14"/><path d="M12 13l2 2-2 2"/></svg></span>
+              <h3 class="h3">Procesos y equipo</h3>
             </div>
-            <p class="body">Tienda con tu marca, pagos, envíos y stock sincronizado con Mercado Libre.</p>
-          </li>
-          <li class="card">
-            <div class="card-top">
-              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="M12 12l6.5-6.5"/><path d="M16 5.5h2.5V8"/></svg></span>
-              <h3 class="h3">Google Ads</h3>
-            </div>
-            <p class="body">Campañas de búsqueda y Shopping para que te encuentren cuando te buscan.</p>
-          </li>
-          <li class="card">
-            <div class="card-top">
-              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="4.5"/><circle cx="12" cy="12" r="3.6"/><circle cx="16.6" cy="7.4" r="1" fill="currentColor" stroke="none"/></svg></span>
-              <h3 class="h3">Instagram y redes</h3>
-            </div>
-            <p class="body">Contenido y comunidad para que tu marca se conozca y genere confianza.</p>
+            <p class="body">Rediseño de procesos de stock, precios y postventa, con roles claros.</p>
           </li>
           <li class="card">
             <div class="card-top">
               <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5h16"/><path d="M5 15.5l4.5-4.5 3.5 3 6-6.5"/><path d="M15 7.5h4v4"/></svg></span>
-              <h3 class="h3">Estrategia y rentabilidad</h3>
+              <h3 class="h3">Rentabilidad y precios</h3>
             </div>
-            <p class="body">Precios, márgenes y competencia analizados para decidir con números.</p>
+            <p class="body">Márgenes por canal y producto, costos y una política de precios.</p>
           </li>
           <li class="card">
             <div class="card-top">
-              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h7.5L19 8v12.5H7z"/><path d="M14.5 3.5V8H19"/><path d="M10 12.5h6M10 16h6"/></svg></span>
-              <h3 class="h3">Seguimiento y reportes</h3>
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8.2 12 4l8 4.2v7.6L12 20l-8-4.2z"/><path d="M4 8.2l8 4.3 8-4.3"/><path d="M12 12.5V20"/></svg></span>
+              <h3 class="h3">Stock y surtido</h3>
             </div>
-            <p class="body">Reporte mensual claro y reuniones para decidir juntos los próximos pasos.</p>
+            <p class="body">Rotación, quiebres y sobrestock: qué comprar, cuánto y qué discontinuar.</p>
+          </li>
+          <li class="card">
+            <div class="card-top">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="M12 12l6.5-6.5"/><path d="M16 5.5h2.5V8"/></svg></span>
+              <h3 class="h3">Publicidad y performance</h3>
+            </div>
+            <p class="body">Estrategia y control de Mercado Ads, Google Ads y Meta Ads según el retorno.</p>
+          </li>
+          <li class="card">
+            <div class="card-top">
+              <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.1V16h5v-.1c0-.8.4-1.5 1.1-2.1A6 6 0 0 0 12 3z"/></svg></span>
+              <h3 class="h3">Mercado y oportunidades</h3>
+            </div>
+            <p class="body">Competidores, tendencias y nuevos productos o canales para crecer.</p>
           </li>
         </ul>
       </div>
@@ -377,69 +429,88 @@ html.deck .ruler{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;a
         <div class="steps">
           <div class="steps-track" aria-hidden="true"><span class="steps-fill"></span></div>
           <ol class="steps-list" data-stagger>
-            <li class="step" style="--i:0"><span class="step-dot" aria-hidden="true"></span><span class="step-n">Paso 1</span><h3 class="h3">Diagnóstico</h3><p class="body">Reviso tu cuenta, tus publicaciones, tus precios y tu competencia para ver dónde se pierden ventas.</p></li>
-            <li class="step" style="--i:1"><span class="step-dot" aria-hidden="true"></span><span class="step-n">Paso 2</span><h3 class="h3">Plan</h3><p class="body">Definimos objetivos concretos y un plan de trabajo para los primeros 90 días.</p></li>
-            <li class="step" style="--i:2"><span class="step-dot" aria-hidden="true"></span><span class="step-n">Paso 3</span><h3 class="h3">Puesta en marcha</h3><p class="body">Ordeno la cuenta, mejoro las publicaciones, armo la tienda y lanzo las campañas.</p></li>
-            <li class="step" style="--i:3"><span class="step-dot" aria-hidden="true"></span><span class="step-n">Paso 4</span><h3 class="h3">Crecimiento</h3><p class="body">Gestiono el día a día, optimizo lo que funciona y medimos resultados cada mes.</p></li>
+            <li class="step" style="--i:0"><span class="step-dot" aria-hidden="true"></span><span class="step-n">Paso 1</span><h3 class="h3">Diagnóstico</h3><p class="body">Analizo tus canales, tus números, tus procesos y tu competencia.</p></li>
+            <li class="step" style="--i:1"><span class="step-dot" aria-hidden="true"></span><span class="step-n">Paso 2</span><h3 class="h3">Plan</h3><p class="body">Definimos objetivos, prioridades y un plan de acción de 90 días.</p></li>
+            <li class="step" style="--i:2"><span class="step-dot" aria-hidden="true"></span><span class="step-n">Paso 3</span><h3 class="h3">Implementación</h3><p class="body">Tu equipo ejecuta con mi acompañamiento: procesos, tableros y capacitación.</p></li>
+            <li class="step" style="--i:3"><span class="step-dot" aria-hidden="true"></span><span class="step-n">Paso 4</span><h3 class="h3">Seguimiento</h3><p class="body">Reuniones periódicas, métricas claras y ajustes sobre la marcha.</p></li>
           </ol>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="slide slide-night" id="caso-lioy" data-label="Caso Elásticos Lioy" data-tone="night">
+  <section class="slide slide-case" id="caso-lioy" data-label="Caso Elásticos Lioy">
     <div class="slide-inner">
-      <header class="slide-head">
-        <p class="eyebrow" data-anim>Caso de éxito</p>
-        <h2 class="h2" data-split>Elásticos Lioy</h2>
-        <p class="case-sub" data-anim>Elásticos y suspensión para camiones y pickups.</p>
-      </header>
-      <div class="slide-body">
-        <div class="figs">
-          <div class="fig fig-small fig-before" data-anim>
-            <span class="fig-label">Antes</span>
-            <span class="fig-value">$0</span>
-            <span class="fig-cap">en Mercado Libre</span>
-          </div>
-          <span class="fig-arrow" aria-hidden="true"></span>
-          <div class="fig" data-anim>
-            <span class="fig-label">Hoy</span>
-            <span class="fig-value"><span class="sr">Más de 15 millones de pesos</span><span aria-hidden="true"><span class="sign">+</span>$<span data-count="15">15</span><span class="unit">M</span></span></span>
-            <span class="fig-cap">de facturación bruta mensual en Mercado Libre</span>
+      <div class="case-grid">
+        <div class="case-main">
+          <header class="slide-head">
+            <p class="eyebrow" data-anim>Caso de éxito</p>
+            <h2 class="h2" data-split>Elásticos Lioy</h2>
+            <p class="case-sub" data-anim>Elásticos y suspensión para camiones, con envíos a todo el país.</p>
+          </header>
+          <div class="slide-body">
+            <div class="figs">
+              <div class="fig fig-small fig-before" data-anim>
+                <span class="fig-label">Antes</span>
+                <span class="fig-value">$0</span>
+                <span class="fig-cap">en Mercado Libre</span>
+              </div>
+              <span class="fig-arrow" aria-hidden="true"></span>
+              <div class="fig" data-anim>
+                <span class="fig-label">Hoy</span>
+                <span class="fig-value"><span class="sr">Más de 15 millones de pesos</span><span aria-hidden="true"><span class="sign">+</span>$<span data-count="15">15</span><span class="unit">M</span></span></span>
+                <span class="fig-cap">de facturación bruta mensual en Mercado Libre</span>
+              </div>
+            </div>
+            <div class="case-foot" data-anim>
+              <span class="label">Qué hice</span>
+              <ul class="chips">
+                <li>Desarrollo de Mercado Libre</li>
+                <li>Tienda en Tiendanube</li>
+                <li>Campañas de Google Ads</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="case-foot" data-anim>
-          <span class="label">Qué hice</span>
-          <ul class="chips">
-            <li>Desarrollo en Mercado Libre</li>
-            <li>Tienda en Tiendanube</li>
-            <li>Campañas de Google Ads</li>
-          </ul>
+        <div class="case-media">
+          <figure class="device">
+            <div class="phone"><div class="phone-screen"><img src="img/lioy-web.webp" width="760" height="1651" alt="Tienda online de Elásticos Lioy vista en un celular, con cuotas sin interés y envíos a todo el país"></div></div>
+            <figcaption>elasticoslioy.com</figcaption>
+          </figure>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="slide slide-night" id="caso-don-roberto" data-label="Caso Ferretería Don Roberto" data-tone="night">
+  <section class="slide slide-case" id="caso-don-roberto" data-label="Caso Ferretería Don Roberto">
     <div class="slide-inner">
-      <header class="slide-head">
-        <p class="eyebrow" data-anim>Caso de éxito</p>
-        <h2 class="h2" data-split>Ferretería Don Roberto</h2>
-        <p class="case-sub" data-anim>Ferretería con venta online y comunidad propia en redes.</p>
-      </header>
-      <div class="slide-body">
-        <div class="figs">
-          <div class="fig" data-anim>
-            <span class="fig-label">Mercado Libre</span>
-            <span class="fig-value"><span class="sr">Más de 100 millones de pesos</span><span aria-hidden="true"><span class="sign">+</span>$<span data-count="100">100</span><span class="unit">M</span></span></span>
-            <span class="fig-cap">de facturación bruta mensual</span>
+      <div class="case-grid">
+        <div class="case-main">
+          <header class="slide-head">
+            <p class="eyebrow" data-anim>Caso de éxito</p>
+            <h2 class="h2" data-split>Ferretería Don Roberto</h2>
+            <p class="case-sub" data-anim>Ferretería de Venado Tuerto, Santa Fe, con envíos a todo el país.</p>
+          </header>
+          <div class="slide-body">
+            <div class="figs figs-col">
+              <div class="fig" data-anim>
+                <span class="fig-label">Mercado Libre</span>
+                <span class="fig-value"><span class="sr">Más de 100 millones de pesos</span><span aria-hidden="true"><span class="sign">+</span>$<span data-count="100">100</span><span class="unit">M</span></span></span>
+                <span class="fig-cap">de facturación bruta mensual</span>
+              </div>
+              <div class="fig fig-small" data-anim>
+                <span class="fig-label">Instagram</span>
+                <span class="fig-value"><span class="sr">Más de 100.000</span><span aria-hidden="true"><span class="sign">+</span><span data-count="100000" data-dur="1900">100.000</span></span></span>
+                <span class="fig-cap">seguidores</span>
+              </div>
+            </div>
           </div>
-          <span class="fig-sep" aria-hidden="true"></span>
-          <div class="fig fig-small" data-anim>
-            <span class="fig-label">Instagram</span>
-            <span class="fig-value"><span class="sr">Más de 100.000</span><span aria-hidden="true"><span class="sign">+</span><span data-count="100000" data-dur="1900">100.000</span></span></span>
-            <span class="fig-cap">seguidores</span>
-          </div>
+        </div>
+        <div class="case-media">
+          <figure class="device">
+            <div class="phone"><div class="phone-screen"><img src="img/don-roberto-instagram.webp" width="760" height="1651" alt="Perfil de Instagram de Ferretería Don Roberto con 141 mil seguidores"></div></div>
+            <figcaption>@ferreteriadonroberto</figcaption>
+          </figure>
         </div>
       </div>
     </div>
@@ -449,14 +520,14 @@ html.deck .ruler{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;a
     <div class="slide-inner">
       <header class="slide-head">
         <p class="eyebrow" data-anim>Por qué trabajar conmigo</p>
-        <h2 class="h2" data-split>Experiencia real y trato directo.</h2>
+        <h2 class="h2" data-split>Experiencia real y visión de negocio.</h2>
       </header>
       <div class="slide-body">
         <ul class="points" data-stagger>
-          <li class="point"><span class="box" aria-hidden="true"></span><h3 class="h3">Vengo de la operación</h3><p class="body">Trabajé dentro de empresas que venden todos los días. Sé lo que pasa detrás de cada venta.</p></li>
-          <li class="point"><span class="box" aria-hidden="true"></span><h3 class="h3">Conozco tu rubro</h3><p class="body">Ferretería, herramientas y repuestos: fichas técnicas, compatibilidades y clientes profesionales.</p></li>
-          <li class="point"><span class="box" aria-hidden="true"></span><h3 class="h3">Cuido tu margen</h3><p class="body">Vender más no alcanza. Mido cuánto te deja cada venta y cada canal.</p></li>
-          <li class="point"><span class="box" aria-hidden="true"></span><h3 class="h3">Hablás conmigo</h3><p class="body">Sin intermediarios. Respuestas rápidas y reportes que se entienden.</p></li>
+          <li class="point"><span class="box" aria-hidden="true"></span><h3 class="h3">Vengo de la operación</h3><p class="body">Gestioné cuentas y equipos que venden todos los días. Recomiendo lo que sé que funciona.</p></li>
+          <li class="point"><span class="box" aria-hidden="true"></span><h3 class="h3">Pienso en el negocio</h3><p class="body">Cada recomendación viene con su impacto en margen, stock y caja.</p></li>
+          <li class="point"><span class="box" aria-hidden="true"></span><h3 class="h3">Mirada multicanal</h3><p class="body">Mercado Libre, tienda propia y publicidad en una sola estrategia.</p></li>
+          <li class="point"><span class="box" aria-hidden="true"></span><h3 class="h3">Tu equipo gana autonomía</h3><p class="body">Dejo procesos, tableros y criterios para que decidan mejor sin depender de mí.</p></li>
         </ul>
       </div>
     </div>
@@ -467,7 +538,7 @@ html.deck .ruler{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;a
     <div class="slide-inner">
       <p class="eyebrow" data-anim>Hablemos</p>
       <h2 class="display" data-split>¿Revisamos juntos tu ecommerce?</h2>
-      <p class="lead" data-anim>En una primera charla miro tu cuenta y te muestro por dónde empezar para vender más.</p>
+      <p class="lead" data-anim>En una primera charla analizamos tu situación y te muestro por dónde empezar.</p>
       <div class="cta-row" data-anim>
         <a class="btn" href="https://www.linkedin.com/in/francocarra/" target="_blank" rel="noopener">Escribime por LinkedIn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></a>
         <span class="url">linkedin.com/in/francocarra</span>
@@ -554,7 +625,6 @@ html.deck .ruler{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;a
 
   function setChrome() {
     const s = slides[cur];
-    root.dataset.tone = s.dataset.tone || 'paper';
     whereLabel.textContent = s.dataset.label;
     whereCount.textContent = pad(cur + 1) + ' / ' + pad(n);
     scale.style.setProperty('--x', n > 1 ? cur / (n - 1) : 0);
@@ -631,7 +701,6 @@ html.deck .ruler{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;a
     deckOn = false;
     root.classList.remove('deck');
     root.classList.add('flow');
-    root.removeAttribute('data-tone');
     slides.forEach((s) => s.classList.remove('is-active'));
     settleCounters();
     if (wasDeck && !initial) slides[cur].scrollIntoView({ block: 'start' });
