@@ -193,7 +193,6 @@ html.deck .cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,1.
 .phone-screen img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
 @media (min-width:600px){
   .kpis-start{grid-template-columns:minmax(0,1fr) minmax(0,1.7fr)}
-  .kpis-lead{grid-template-columns:minmax(0,1.7fr) minmax(0,1fr)}
 }
 html.deck .case-grid{flex:1 0 auto;grid-template-columns:minmax(0,1fr) auto;align-items:stretch;gap:clamp(32px,4vw,80px)}
 html.deck .case-main{gap:0}
@@ -205,6 +204,7 @@ html.deck .phone{--pw:clamp(170px,min(20vw,calc((100vh - var(--bar-h) - var(--ru
 .window{min-width:640px;border-radius:12px;overflow:hidden;background:#f5f5f5;box-shadow:0 0 0 1px var(--line-2),0 40px 80px -40px rgba(0,0,0,.9)}
 .window-bar{display:flex;align-items:center;gap:6px;height:26px;padding-inline:12px;background:#1B2023}
 .window-bar span{width:8px;height:8px;border-radius:50%;background:#3A4247}
+.window-tag{margin-left:auto;padding:.3em .7em;border-radius:999px;background:rgba(255,181,71,.14);color:#FFB547;font-size:10.5px;font-style:normal;font-weight:600;letter-spacing:.08em;text-transform:uppercase;line-height:1.2}
 .shot-screen{position:relative;container-type:inline-size;aspect-ratio:998/486}
 .shot-screen img{display:block;width:100%;height:100%}
 .shot figcaption{font-size:var(--fs-label);font-weight:500;letter-spacing:.04em;color:var(--text-2)}
@@ -219,6 +219,7 @@ html.deck .phone{--pw:clamp(170px,min(20vw,calc((100vh - var(--bar-h) - var(--ru
 .ml-flat{color:#737373}
 .ml-cover{position:absolute;left:calc(60 / 998 * 100%);top:calc(290 / 486 * 100%);width:calc(898 / 998 * 100%);height:calc(154 / 486 * 100%);background:#fff;transform-origin:right;transform:scaleX(0)}
 html.deck .shot{width:min(100%,1180px,calc((100vh - var(--bar-h) - var(--ruler-h) - 3vh - 230px) * 2.053))}
+html.deck .shot-case{width:min(100%,calc((100vh - var(--bar-h) - var(--ruler-h) - 3vh - 12 * var(--u) - 170px) * 2.053))}
 html.deck .shot-scroll{overflow:visible}
 html.deck .window{min-width:0}
 
@@ -551,21 +552,28 @@ html.deck .ruler{position:fixed;left:0;right:0;bottom:0;z-index:5;display:flex;a
             <p class="case-sub" data-anim>Ferretería de Venado Tuerto, Santa Fe, con envíos a todo el país.</p>
           </header>
           <div class="slide-body">
-            <div class="dash" data-anim>
-              <p class="dash-head"><b>Resumen de desempeño</b><span>Mercado Libre e Instagram</span></p>
-              <div class="kpis kpis-lead" data-stagger>
-                <div class="kpi kpi-main">
-                  <span class="kpi-label">Ventas brutas por mes</span>
-                  <span class="kpi-value"><span class="sr">Más de 100 millones de pesos por mes</span><span aria-hidden="true"><span class="sign">+</span>$<span data-count="100000000" data-delay="700" data-dur="2000">100.000.000</span></span></span>
-                  <span class="kpi-foot">Mercado Libre</span>
-                </div>
-                <div class="kpi">
-                  <span class="kpi-label">Seguidores</span>
-                  <span class="kpi-value"><span class="sr">Más de 100.000</span><span aria-hidden="true"><span class="sign">+</span><span data-count="100000" data-delay="900" data-dur="1900">100.000</span></span></span>
-                  <span class="kpi-foot">Instagram</span>
+            <figure class="shot shot-case" data-anim>
+              <div class="shot-scroll">
+                <div class="window">
+                  <div class="window-bar"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span><em class="window-tag">Recreación ilustrativa</em></div>
+                  <div class="shot-screen">
+                    <img src="img/ml-resumen.png" width="998" height="486" alt="Recreación ilustrativa de un resumen de desempeño de Mercado Libre, con datos de ejemplo y ventas brutas de más de 100 millones de pesos por mes.">
+                    <div aria-hidden="true">
+                      <span class="ml-val" style="--x:57;--b:115"><span class="ml-n"><span class="ghost">$ 103.847.215</span><span>$ <span data-count="103847215" data-delay="600" data-dur="1800">103.847.215</span></span></span><span class="ml-delta ml-up"><svg viewBox="0 0 10 10"><path d="M5 1.5 9 8.5H1z" fill="currentColor"/></svg>12,4%</span></span>
+                      <span class="ml-val" style="--x:292;--b:115"><span class="ml-n"><span class="ghost">4.152</span><span><span data-count="4152" data-delay="680" data-dur="1600">4.152</span></span></span><span class="ml-delta ml-up"><svg viewBox="0 0 10 10"><path d="M5 1.5 9 8.5H1z" fill="currentColor"/></svg>9,8%</span></span>
+                      <span class="ml-val" style="--x:527;--b:115"><span class="ml-n"><span class="ghost">$ 25.011,37</span><span>$ <span data-count="25011.37" data-decimals="2" data-delay="760" data-dur="1600">25.011,37</span></span></span><span class="ml-delta ml-up"><svg viewBox="0 0 10 10"><path d="M5 1.5 9 8.5H1z" fill="currentColor"/></svg>2,4%</span></span>
+                      <span class="ml-val" style="--x:762;--b:115"><span class="ml-n"><span class="ghost">118.540</span><span><span data-count="118540" data-delay="840" data-dur="1600">118.540</span></span></span><span class="ml-delta ml-up"><svg viewBox="0 0 10 10"><path d="M5 1.5 9 8.5H1z" fill="currentColor"/></svg>6,1%</span></span>
+                      <span class="ml-val" style="--x:56;--b:185"><span class="ml-n"><span class="ghost">3.194</span><span><span data-count="3194" data-delay="920" data-dur="1600">3.194</span></span></span><span class="ml-delta ml-up"><svg viewBox="0 0 10 10"><path d="M5 1.5 9 8.5H1z" fill="currentColor"/></svg>8,6%</span></span>
+                      <span class="ml-val" style="--x:292;--b:185"><span class="ml-n"><span class="ghost">2,7%</span><span><span data-count="2.7" data-decimals="1" data-delay="1000" data-dur="1600">2,7</span>%</span></span><span class="ml-delta ml-up"><svg viewBox="0 0 10 10"><path d="M5 1.5 9 8.5H1z" fill="currentColor"/></svg>0,1 puntos</span></span>
+                      <span class="ml-val" style="--x:527;--b:185"><span class="ml-n"><span class="ghost">$ 32.513,22</span><span>$ <span data-count="32513.22" data-decimals="2" data-delay="1080" data-dur="1600">32.513,22</span></span></span><span class="ml-delta ml-up"><svg viewBox="0 0 10 10"><path d="M5 1.5 9 8.5H1z" fill="currentColor"/></svg>3,5%</span></span>
+                      <span class="ml-val" style="--x:762;--b:185"><span class="ml-n"><span class="ghost">21</span><span><span data-count="21" data-delay="1160" data-dur="1600">21</span></span></span><span class="ml-delta ml-flat">0%</span></span>
+                      <span class="ml-cover"></span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+              <figcaption>Recreación ilustrativa con datos de ejemplo, basada en una facturación bruta real de más de $100 millones por mes.</figcaption>
+            </figure>
           </div>
         </div>
         <div class="case-media">
