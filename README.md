@@ -24,6 +24,12 @@
 | 7 | [Decisiones pendientes](docs/07-decisiones-pendientes.md) | Lo que tenemos que definir entre los dos (con sugerencias) |
 | 8 | [Caso Elásticos Lioy](docs/08-caso-elasticos-lioy.md) | Plantilla del primer caso de éxito, para completar con números |
 
+## Clientes
+
+| Cliente | Documento | Estado |
+|---|---|---|
+| Silvestre Máquinas y Jardines (Maipú, Mendoza) | [Paso 1: alta en Mercado Libre](clientes/silvestre/01-alta-mercado-libre.md) | Juntando datos del cliente |
+
 ## Presentación comercial
 
 [`presentacion/index.html`](presentacion/index.html) es una presentación animada con los servicios, la experiencia y los casos de éxito, sin precios. Se abre en cualquier navegador.
