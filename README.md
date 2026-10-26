@@ -28,7 +28,7 @@
 
 | Cliente | Documento | Estado |
 |---|---|---|
-| Silvestre Máquinas y Jardines (Maipú, Mendoza) | [Paso 1: alta en Mercado Libre](clientes/silvestre/01-alta-mercado-libre.md) | Juntando datos del cliente |
+| Silvestre Máquinas y Jardines (Maipú, Mendoza) | [Paso 1: alta en Mercado Libre](clientes/silvestre/01-alta-mercado-libre.md) · Paso 2: Tiendanube *(pendiente)* · [Paso 3: publicar en catálogo](clientes/silvestre/03-publicar-en-catalogo.md) | Juntando datos del cliente |
 
 ## Presentación comercial
 

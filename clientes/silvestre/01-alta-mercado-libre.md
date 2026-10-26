@@ -78,4 +78,4 @@ Lo hacemos **en una reunión con el dueño presente** (presencial o por videolla
 
 ## Próximo paso
 
-**Paso 2:** revisar la tienda en Tiendanube y conectarla con Mercado Libre para manejar stock y precios desde un solo lugar. **Paso 3:** primeras publicaciones, empezando por repuestos y accesorios.
+**Paso 2:** revisar la tienda en Tiendanube y conectarla con Mercado Libre para manejar stock y precios desde un solo lugar. **Paso 3:** primeras publicaciones, empezando por repuestos y accesorios, y [publicación en catálogo](03-publicar-en-catalogo.md).
