@@ -1,229 +1,361 @@
 # Silvestre: manual de marca para la web nueva
 
-> Guía para que la tienda nueva (más ecommerce) se vea y hable siempre igual: en la web, en Mercado Libre, en redes y en WhatsApp. Sirve para nosotros, para el diseñador que arme la plantilla y para quien cargue productos.
+> Guía para desarrollar la tienda nueva en Tiendanube, más pensada para vender online, y para que todo se vea y hable igual: web, Mercado Libre, redes y WhatsApp.
 >
-> **Borrador v0.1, 26/10/2026.** Basado en lo que muestra hoy [silvestre.com.ar](https://silvestre.com.ar/) en los buscadores (nombre, categorías, dirección, marcas) y en la lista de marcas que pasó el cliente. **No pudimos ver el sitio en vivo**, así que el logo, los colores y las tipografías actuales están marcados como **a relevar**. Todo lo marcado como *propuesta* se valida con el cliente.
+> **v1.0, 26/10/2026.** Hecho a partir de capturas de [silvestre.com.ar](https://www.silvestre.com.ar/) (portada, listado de productos y contacto) y de la lista de marcas que pasó el cliente. Los colores se midieron sobre esas capturas. Hay que confirmarlos con el archivo original del logo cuando lo tengamos.
+>
+> Las variables para el desarrollo están en [`marca/silvestre-tokens.css`](marca/silvestre-tokens.css).
+
+## Resumen rápido
+
+| Elemento | Valor |
+|---|---|
+| Nombre | **Silvestre** (bajada: *máquinas y jardines*) |
+| Naranja Silvestre | `#F29100`: logo, barra superior, acentos |
+| Verde Silvestre | `#3AAA35`: rama del logo, íconos, detalles |
+| Verde acción | `#2E7D32`: botones y links (texto blanco encima) |
+| Verde claro | `#EAF9C6`: pie de página y secciones de apoyo |
+| Texto | `#1A1A1A` |
+| Tipografía | **Nunito** para títulos, **Nunito Sans** para textos *(propuesta)* |
+| Voz | Especialista de mostrador: claro, práctico, de confianza |
 
 ---
 
-## 1. Quiénes somos
+## 1. La web actual: qué mantener y qué cambiar
 
-**Nombre:** Silvestre Máquinas y Jardines. En la web y en la tienda de Mercado Libre se usa **"Silvestre"** como nombre corto, y "Máquinas y Jardines" como bajada.
+**Mantener:**
 
-**Qué somos:** una casa especializada en **máquinas y herramientas para jardín, parque y campo**, en Maipú, Mendoza. **Distribuidor oficial STIHL** y multimarca: Oleo-Mac, Fiasa, MTD / Yard Machines, Tramontina, Bahco, Picasso, Niwa, Konan, Dowen Pagio y BTA.
+- El **logo** y sus dos colores, naranja y verde. Son reconocibles y conectan con el rubro.
+- La **barra superior naranja** con envíos y retiro en Maipú.
+- El **pie de página verde claro**: es amable y separa bien el cierre de la página.
+- El **botón de WhatsApp** fijo abajo a la derecha.
+- La frase *"Somos distribuidores oficiales STIHL y especialistas en máquinas y herramientas para jardín y campo"*. Es el mejor texto de la web y tiene que subir de jerarquía.
 
-**Dirección:** Tropero Sosa 175, Maipú, Mendoza *(confirmar)*.
+**Cambiar:**
+
+| Hoy | Problema | En la web nueva |
+|---|---|---|
+| Menú con solo Inicio, Productos y Contacto | El cliente no encuentra por dónde empezar | Menú por categorías de uso, más Marcas (sección 10) |
+| "Bienvenido a nuestra Tienda online" como título principal | No dice qué venden ni por qué comprarles | Título con la propuesta y botón de compra (sección 6) |
+| Foto de portada de troncos de pino, desenfocada | No muestra productos ni Mendoza ni uso | Banners con producto + uso real + oferta |
+| "Ver productos" como link subrayado | No parece un botón y casi no se ve | Botón verde de acción |
+| Listado de productos **sin precio** | La primera pregunta del comprador queda sin responder | Precio y cuotas siempre visibles en la tarjeta |
+| Títulos mezclados: "Motosierra MS 162" y "MOTOSIERRA ELECTRICA MSE 141" | Se ve descuidado, sin tilde y sin marca | Fórmula fija de título (sección 11) |
+| Fotos de producto de distintos tamaños y alineación | La grilla se ve desordenada | Fotos cuadradas, mismo encuadre (sección 8) |
+| Texto blanco sobre naranja en la barra superior | Contraste 2,4:1, se lee mal | Texto casi negro sobre naranja (7,3:1) |
+| Botón "Enviar" verde claro `#62C659` con texto blanco | Contraste 2,2:1 | Verde acción `#2E7D32` (5,1:1) |
+| Teléfono repetido dos veces, sin formato | Confunde | Un solo número: **(261) 242-6888**, con link a WhatsApp |
+| Mail @gmail.com | Resta confianza en compras grandes | Mail con dominio propio, por ejemplo `ventas@silvestre.com.ar` |
+
+## 2. Quiénes somos
+
+**Silvestre Máquinas y Jardines.** Casa especializada en máquinas y herramientas para jardín, parque y campo, en **Tropero Sosa 175, Maipú, Mendoza**. **Distribuidor oficial STIHL** y multimarca.
 
 **Frase de posicionamiento** *(propuesta)*:
 
-> **Las máquinas para tu jardín y tu campo, con el asesoramiento de quien las conoce.**
+> **Máquinas para tu jardín y tu campo, con el asesoramiento de quien las conoce.**
 
-**Por qué comprarnos** (los 4 argumentos que se repiten en toda la web, en este orden):
+**Por qué comprarnos** (los 4 argumentos de toda la web, en este orden):
 
-1. **Somos especialistas.** Te ayudamos a elegir la máquina correcta para tu terreno y tu uso.
+1. **Somos especialistas.** Te ayudamos a elegir la máquina para tu terreno y tu uso.
 2. **Marcas originales y garantía oficial.** Distribuidor oficial STIHL y marcas líderes.
-3. **Repuestos y servicio técnico** *(confirmar si tienen taller propio)*. No te dejamos solo después de la compra.
+3. **Repuestos y servicio** *(confirmar si tienen taller propio)*. No te dejamos solo después de la compra.
 4. **Envíos a todo el país y retiro en Maipú.**
 
-## 2. Personalidad y tono de voz
+## 3. Logo
 
-**Cómo somos:** el vendedor de mostrador que sabe. Práctico, claro, de confianza. Nada de vueltas ni palabras de folleto.
+**Cómo es:** la palabra **"silvestre"** en minúscula, letra redondeada y gruesa, en **naranja**. A la derecha, una **rama verde** que la cierra como un paréntesis. Debajo, alineada a la derecha, la bajada **"máquinas y jardines"** en verde.
+
+**Versiones que hay que pedir o armar:**
+
+| Versión | Uso | Estado |
+|---|---|---|
+| Color (naranja y verde) | Encabezado, pie, documentos | Pedir en vector (SVG, AI o PDF) |
+| Blanco | Sobre fotos y fondos oscuros | Armar |
+| Una tinta oscura `#1A1A1A` | Facturas, sellos, usos de un color | Armar |
+| Ícono: la rama sola, o una "s" naranja con la rama | Favicon, perfil de Mercado Libre, Instagram y WhatsApp | Armar |
+
+**Reglas:**
+
+- **Fondos permitidos:** blanco, verde claro `#EAF9C6` y fotos con una zona limpia. Nunca sobre naranja: el logo desaparece.
+- **Área de respeto:** alrededor del logo, un espacio libre igual al alto de la letra "s".
+- **Tamaño mínimo:** 140 px de ancho con bajada, 100 px sin bajada. Debajo de 140 px la bajada no se lee: usar la versión sin bajada.
+- **En el encabezado:** entre 160 y 220 px de ancho en computadora y entre 120 y 140 px en celular, siempre centrado como hoy.
+- **No:** estirar, rotar, cambiar los colores, separar la rama de la palabra, agregar sombras o contornos, ni escribir "Silvestre" con otra letra en lugar del logo.
+
+## 4. Colores
+
+### De marca (salen del logo)
+
+| Nombre | Hex | RGB | Uso |
+|---|---|---|---|
+| **Naranja Silvestre** | `#F29100` | 242, 145, 0 | Logo, barra superior, etiquetas de oferta, detalles |
+| **Verde Silvestre** | `#3AAA35` | 58, 170, 53 | Rama del logo, íconos, estado "en stock" |
+
+### Para la interfaz (derivados, para que todo se lea bien)
+
+| Nombre | Hex | Uso |
+|---|---|---|
+| **Verde acción** | `#2E7D32` | Botones principales y links |
+| Verde acción, al pasar el mouse | `#1E5A23` | Estado *hover* de botones y links |
+| **Verde claro** | `#EAF9C6` | Pie de página, bloques de beneficios |
+| Naranja claro | `#FFF4E0` | Fondo de avisos y de la franja de cuotas |
+| Naranja para texto | `#A35500` | Si hace falta texto naranja sobre blanco (5,5:1) |
+
+### Neutros
+
+| Nombre | Hex | Uso |
+|---|---|---|
+| Fondo | `#FFFFFF` | Fondo general |
+| Superficie | `#F6F6F3` | Fondos de sección, tarjetas |
+| Borde | `#E4E4DE` | Líneas y bordes de campos |
+| Texto | `#1A1A1A` | Títulos, textos y **precios** |
+| Texto secundario | `#5F6368` | Bajadas, datos técnicos, cuotas |
+| Error | `#C0392B` | Errores de formularios |
+
+### Reglas de color
+
+1. **Nunca texto blanco sobre naranja ni sobre el verde del logo.** No se lee (2,4:1 y 3,0:1). Sobre naranja va texto `#1A1A1A`.
+2. **Los botones de compra son verde acción** con texto blanco. Es el único color "que llama" en la página.
+3. **El naranja es acento, no fondo.** Barra superior, etiquetas de oferta y detalles chicos. Los productos STIHL ya son naranjas: si la web usa mucho naranja, las fotos se pierden y las otras marcas parecen de segunda.
+4. **Los precios van en `#1A1A1A`**, no en color.
+5. **Proporción aproximada:** 70 % blanco y neutros, 15 % verde, 10 % naranja, 5 % texto y detalles.
+
+### Contraste medido (WCAG 2.1)
+
+| Combinación | Contraste | Resultado |
+|---|---|---|
+| `#1A1A1A` sobre `#FFFFFF` | 17,4:1 | AAA |
+| `#1A1A1A` sobre `#F29100` (barra superior) | 7,3:1 | AAA |
+| Blanco sobre `#2E7D32` (botón) | 5,1:1 | AA |
+| `#1E5A23` sobre `#EAF9C6` (textos del pie) | 7,4:1 | AAA |
+| `#5F6368` sobre `#FFFFFF` | 6,1:1 | AA |
+| Blanco sobre `#F29100` | 2,4:1 | **No usar** |
+| Blanco sobre `#62C659` (botón actual) | 2,2:1 | **No usar** |
+| `#559D70` sobre `#EAF9C6` (textos del pie actual) | 2,9:1 | **No usar** |
+
+## 5. Tipografía *(propuesta)*
+
+El logo es redondeado y amable. Para acompañarlo sin copiarlo:
+
+- **Títulos:** **Nunito**, peso 700 u 800. Redondeada como el logo.
+- **Textos, precios y botones:** **Nunito Sans**, peso 400 y 600. Muy legible en celular y con buenos números.
+
+Las dos son de Google Fonts. Si la plantilla de Tiendanube no las ofrece en su lista, se cargan por CSS (ver sección 13).
+
+| Elemento | Computadora | Celular | Peso |
+|---|---|---|---|
+| Título de portada (H1) | 40 px | 28 px | Nunito 800 |
+| Título de sección (H2) | 28 px | 22 px | Nunito 700 |
+| Título de ficha de producto | 26 px | 20 px | Nunito 700 |
+| Nombre en tarjeta de producto | 16 px | 15 px | Nunito Sans 600 |
+| Precio en tarjeta | 20 px | 18 px | Nunito Sans 700 |
+| Precio en ficha | 32 px | 26 px | Nunito Sans 700 |
+| Texto | 16 px | 16 px | Nunito Sans 400 |
+| Datos chicos (cuotas, envío) | 14 px | 13 px | Nunito Sans 400 |
+
+Interlineado de 1,5 en textos y de 1,2 en títulos. Títulos en **tipo oración** ("Motosierras a batería"), nunca todo en mayúscula.
+
+## 6. Componentes de la web
+
+### Barra superior
+
+- Fondo naranja `#F29100`, texto `#1A1A1A` semibold de 13 a 14 px.
+- Máximo tres mensajes, separados por un punto medio: **Envíos a todo el país · Retiro en Maipú · Hasta X cuotas sin interés**.
+- En celular, un mensaje por vez, rotando.
+
+### Encabezado
+
+- Como hoy: buscador a la izquierda, logo al centro, cuenta y carrito a la derecha.
+- **Buscador más visible**: en computadora, una caja de búsqueda abierta ("Buscá por máquina, marca o modelo"), no solo la lupa.
+- Debajo, el **menú de categorías** (sección 10), con submenú al pasar el mouse.
+
+### Portada (de arriba hacia abajo)
+
+1. **Banner principal:** producto o persona usando una máquina, título corto, bajada y botón. Ejemplo: *"Motosierras STIHL · Hasta 6 cuotas sin interés · [Ver motosierras]"*.
+2. **Franja de beneficios** (fondo verde claro): los 4 argumentos de la sección 2, cada uno con un ícono.
+3. **Categorías destacadas:** 6 a 8 tarjetas con foto y nombre.
+4. **Más vendidos:** grilla de productos.
+5. **Marcas:** franja con los logos (sección 9).
+6. **Línea a batería** u otra campaña del momento.
+7. **Nosotros:** foto del local y una frase. *"Nos encontrás en Tropero Sosa 175, Maipú."*
+
+### Botones
+
+| Tipo | Fondo | Texto | Borde | Uso |
+|---|---|---|---|---|
+| Principal | `#2E7D32` (hover `#1E5A23`) | Blanco, Nunito Sans 600 | Ninguno | Comprar, Agregar al carrito, Ver productos |
+| Secundario | Transparente | `#2E7D32` | 2 px `#2E7D32` | Ver más, Ver ficha técnica |
+| WhatsApp | `#25D366` | `#1A1A1A` | Ninguno | Consultar por WhatsApp (color oficial de WhatsApp) |
+
+Esquinas redondeadas de **8 px**, alto mínimo de **48 px** en celular para tocar fácil.
+
+### Tarjeta de producto
+
+- Foto cuadrada sobre fondo blanco, toda la tarjeta clickeable.
+- **Marca** en chico (gris, mayúscula solo si la marca se escribe así), **nombre** debajo, **precio** grande, **cuotas** debajo en gris.
+- Etiquetas arriba a la izquierda, máximo dos:
+  - **Oferta / % OFF:** fondo `#F29100`, texto `#1A1A1A`.
+  - **Envío gratis:** fondo `#EAF9C6`, texto `#1E5A23`.
+  - **A batería:** fondo `#F6F6F3`, texto `#1A1A1A`, con ícono de batería.
+- Sin stock: foto en gris al 50 % y el texto "Sin stock por ahora".
+
+### Ficha de producto
+
+- Izquierda: galería de fotos. Derecha: marca, título, precio, cuotas, envío y botón de compra.
+- Debajo del botón: **Consultar por WhatsApp** y tres sellos chicos: *Garantía oficial · Compra protegida · Retiro en Maipú*.
+- Más abajo: descripción, ficha técnica en tabla, qué trae la caja y productos relacionados (repuestos y accesorios del mismo modelo).
+
+### Pie de página
+
+- Fondo verde claro `#EAF9C6`, textos `#1E5A23`.
+- Columnas: **Categorías · Ayuda** (envíos, cambios, garantía, cómo comprar) **· Contacto · Seguinos**.
+- Contacto: (261) 242-6888 · mail de dominio propio · Tropero Sosa 175, Maipú, Mendoza · horarios · mapa.
+- Mantener lo legal: razón social y CUIT, Defensa del Consumidor y botón de arrepentimiento (es obligatorio).
+
+### Íconos
+
+Línea simple de 1,5 a 2 px, esquinas redondeadas (combinan con el logo), un solo color: `#2E7D32` sobre fondos claros. Íconos fijos para: envío, retiro en local, cuotas, garantía, servicio técnico, WhatsApp, batería, nafta y eléctrico.
+
+## 7. Voz y tono
+
+**Cómo somos:** el vendedor de mostrador que sabe. Práctico, claro, de confianza.
 
 | Somos | No somos |
 |---|---|
 | Expertos que explican simple | Técnicos que hablan en código |
-| Cercanos (tratamos de **vos**) | Informales de más ("che", emojis en cada frase) |
+| Cercanos (tratamos de **vos**) | Informales de más |
 | Concretos: datos, usos, medidas | Exagerados ("¡¡la mejor del mercado!!") |
 | Honestos: si no te sirve, te lo decimos | Vendedores a cualquier costo |
 
-**Reglas de escritura:**
-
-- Hablar del **uso** antes que de la ficha técnica: *"Para jardines de hasta 500 m²"* vale más que *"Motor de 139 cc"*. Las dos cosas van, en ese orden.
-- Frases cortas. Una idea por frase.
-- Números siempre con unidad y formato argentino: **$ 1.250.000**, **45,4 cc**, **2,3 kW**, **40 cm**.
-- Sin mayúsculas sostenidas, salvo nombres de marca que se escriben así (STIHL).
-- Signos de exclamación: como mucho uno por pantalla.
-
-**Ejemplos:**
+**Reglas:** primero el **uso** y después el dato técnico. Frases cortas. Números con unidad y formato argentino (**$ 1.250.000**, **45,4 cc**, **40 cm**). Como mucho un signo de exclamación por pantalla. Siempre con tildes: *eléctrica, batería, jardín, máquinas*.
 
 | En vez de | Escribimos |
 |---|---|
-| "¡¡Súper ofertas imperdibles en motosierras!!" | "Motosierras STIHL con hasta 6 cuotas sin interés" |
+| "Bienvenido a nuestra Tienda online" | "Máquinas para tu jardín y tu campo" |
+| "¡¡Súper ofertas imperdibles!!" | "Motosierras STIHL con hasta 6 cuotas sin interés" |
 | "Producto de excelente calidad" | "Motor de 2 tiempos de 45,4 cc, ideal para leña y poda" |
 | "Consulte disponibilidad" | "¿Tenés dudas? Escribinos por WhatsApp y te asesoramos" |
-| "Envíos" | "Envío a todo el país o retiro gratis en Maipú" |
+| "Consultar Envíos" | "Envíos a todo el país" |
 
-**Textos fijos de la tienda** (usar siempre estos):
+**Textos fijos de la tienda:**
 
 | Lugar | Texto |
 |---|---|
 | Botón de compra | **Comprar** |
 | Botón secundario | **Agregar al carrito** |
-| Botón de consulta | **Consultar por WhatsApp** |
-| Barra superior | *Envío a todo el país · Retiro en Maipú · Hasta X cuotas sin interés* (ajustar a lo que ofrezcan) |
+| Consulta | **Consultar por WhatsApp** |
+| Buscador | *Buscá por máquina, marca o modelo* |
 | Sin stock | **Sin stock por ahora.** Avisame cuando llegue |
-| Garantía | **Garantía oficial de [marca]** + plazo |
+| Garantía | **Garantía oficial [marca]** + plazo |
+| Newsletter | *Recibí ofertas y novedades. Sin spam.* |
 
-## 3. Identidad visual
+## 8. Fotos
 
-### Logo *(a relevar)*
+**De producto** (en la web y en Mercado Libre):
 
-- Pedir al cliente el **logo en vector** (AI, SVG o PDF) y en PNG con fondo transparente, en versión color, blanco y negro.
-- Definir una **versión horizontal** (para el encabezado de la web) y una **versión cuadrada o isotipo** (para el ícono del navegador, el perfil de Mercado Libre y redes).
-- **Área de respeto:** dejar alrededor del logo un espacio libre igual al alto de la letra "S" del logo.
-- **Tamaño mínimo:** 120 px de ancho en pantalla.
-- **No:** estirar, cambiar colores, agregar sombras, ponerlo sobre fotos recargadas sin una franja de fondo.
+- Fondo **blanco puro**, producto entero ocupando el 85 % del cuadro, **centrado** y con el mismo margen en todas.
+- **Cuadradas, mínimo 1200 × 1200 px.**
+- Las motosierras y cortacercos, que son alargados, van en diagonal o con más margen arriba y abajo, para que se vean del mismo tamaño que el resto en la grilla.
+- Sin logos, textos ni marcas de agua encima.
+- Orden: 1) de tres cuartos, 2) lateral, 3) detalle del motor o cabezal, 4) qué trae la caja, 5) en uso.
 
-### Colores *(propuesta, a ajustar con el logo actual)*
+**De ambiente** (banners, categorías, redes):
 
-La regla más importante: **Silvestre no usa el color de ninguna de las marcas que vende.** El naranja es de STIHL, el rojo es de Oleo-Mac, y así con cada una. Si la web usa el naranja STIHL como color propio, parece una página de STIHL y las otras marcas quedan de segunda. El color de Silvestre tiene que enmarcar a todas por igual.
+- **Mendoza real:** jardines, parques, fincas, viñedos, montaña. Nos diferencia de una tienda de Buenos Aires.
+- Gente usando las máquinas **con el equipo de protección puesto**. Nunca un uso inseguro.
+- Luz natural, sin filtros fuertes. La foto de bosque de la portada actual puede quedar como fondo de la sección "Nosotros", no como portada.
 
-| Uso | Color propuesto | Para qué |
+## 9. Las marcas que vendemos
+
+**Reglas:**
+
+- Solo **logos oficiales**, del kit de cada marca o del proveedor. Nunca recortados de una foto.
+- En la franja de marcas, todos del **mismo tamaño visual**, sobre blanco o gris muy claro.
+- El sello **"Distribuidor oficial STIHL"** se usa con el formato y la autorización de STIHL. Pedirlo.
+- Las marcas van **dentro** de la tienda Silvestre: encabezado, colores y botones siempre son de Silvestre.
+
+| Marca | Qué vendemos | Notas |
 |---|---|---|
-| **Principal** | Verde monte, aprox. `#1F4D2B` | Logo, encabezado, títulos, pie de página |
-| **Acción** | Verde brote, aprox. `#3E8E41` | Botones de compra y links. Es el único color "que llama" |
-| **Acento** | Arena / tierra de Mendoza, aprox. `#D9A441` | Etiquetas de oferta, cuotas, destacados. Con moderación |
-| **Texto** | Casi negro, `#1A1A1A` | Textos largos |
-| **Gris de apoyo** | `#6B6B6B` | Datos secundarios, bajadas |
-| **Fondos** | Blanco `#FFFFFF` y gris muy claro `#F4F4F1` | Fondo de la tienda y de las secciones |
-
-Si el logo actual ya tiene colores definidos, **mandan los del logo** y esta tabla se ajusta a ellos.
-
-### Tipografías *(propuesta)*
-
-Dos familias de Google Fonts, que se pueden usar en Tiendanube:
-
-- **Títulos:** *Barlow Semi Condensed* (semibold o bold). Robusta, tipo herramienta, y entra bien en títulos largos de producto.
-- **Textos y precios:** *Inter* (regular y semibold). Muy legible en celular y en números.
-
-Si el logo usa una tipografía particular, no se usa en la web para textos: queda solo en el logo.
-
-### Íconos
-
-Línea simple, un solo color (el principal), mismo grosor en todos. Íconos fijos para: envío, retiro en local, cuotas, garantía, servicio técnico, WhatsApp, batería, nafta, eléctrico.
-
-## 4. Fotos y piezas gráficas
-
-**Fotos de producto** (las que van en la ficha y en Mercado Libre):
-
-- **Fondo blanco puro**, producto entero, sin cortar, ocupando el 85 % de la imagen.
-- **Cuadradas**, mínimo **1200 × 1200 px**.
-- Sin logos de Silvestre, textos, sellos ni marcas de agua encima. Mercado Libre las rechaza y en la web ensucian.
-- Orden: 1) producto de frente en ángulo de tres cuartos, 2) lateral, 3) detalle del motor o del cabezal, 4) qué trae la caja, 5) el producto en uso.
-- Usar las fotos oficiales de cada marca cuando existan. Si se sacan propias, todas con la misma luz y el mismo fondo.
-
-**Fotos de ambiente** (banners, categorías, redes):
-
-- Jardines, parques, fincas, viñedos y montaña: **Mendoza real**. Es lo que nos diferencia de una tienda de Buenos Aires.
-- Gente usando las máquinas **con el equipo de protección puesto** (protector auditivo, anteojos, guantes). Nunca mostrar un uso inseguro.
-- Luz natural, colores verdes y tierra, sin filtros fuertes.
-
-**Banners de la portada:**
-
-- Un mensaje por banner: título corto (máximo 6 palabras) + una bajada + un botón.
-- Siempre una versión para celular (la mayoría de las visitas llegan por ahí).
-- Las medidas dependen de la plantilla de Tiendanube que elijamos: definirlas cuando la elijamos.
-
-## 5. Las marcas que vendemos
-
-### Reglas para usar marcas de terceros
-
-- Usar **solo logos oficiales**, sacados del kit de prensa de cada marca o pedidos al proveedor. Nunca recortados de una foto ni redibujados.
-- No cambiarles el color ni la forma. Sobre fondo oscuro, usar la versión en blanco de la marca, si existe.
-- En la grilla de marcas, **todos los logos del mismo tamaño visual** y en una franja de fondo neutro.
-- El sello **"Distribuidor oficial STIHL"** se usa solo con la autorización y el formato que indique STIHL. Pedírselo. Lo mismo para cualquier otra marca que dé un sello de distribuidor.
-- Las marcas aparecen **dentro** de la tienda Silvestre, no en lugar de ella: el encabezado, los colores y los botones siempre son de Silvestre.
-
-### Qué vendemos de cada una
-
-| Marca | Qué vendemos | Notas para la web |
-|---|---|---|
-| **STIHL** | Máquinas y repuestos | Marca principal. Página de marca destacada. Confirmar qué permite publicar online y si tiene precio sugerido |
-| **Oleo-Mac** | Cortadoras, tanzas, repuestos | Se escribe **Oleo-Mac**, con guion |
+| **STIHL** | Máquinas y repuestos | Marca principal, primera en la franja. Confirmar qué permite publicar online |
+| **Oleo-Mac** | Cortadoras, tanzas, repuestos | Se escribe con guion |
 | **Fiasa** | Cortadoras, repuestos | |
-| **MTD / Yard Machines** | Tractores | Mostrar como **Yard Machines by MTD** si el proveedor lo usa así. Confirmar |
+| **MTD / Yard Machines** | Tractores | Confirmar si se muestra como "Yard Machines by MTD" |
 | **Tramontina** | Bordeadoras, accesorios y herramientas de jardín | |
-| **Bahco** | Solo herramientas de poda | En la página de marca, aclarar que trabajamos la línea de poda |
-| **Picasso** | Semillas de césped | Categoría propia: no es una máquina |
+| **Bahco** | Herramientas de poda | Aclarar que trabajamos la línea de poda |
+| **Picasso** | Semillas de césped | |
 | **Niwa** | Máquinas para jardinería | |
 | **Konan** | Algunas máquinas para jardín | Mostrar solo los modelos que trabajan |
-| **Dowen Pagio** | Robots cortacésped y robots de piscina | Los robots de piscina van en una categoría aparte: no son de jardín. Confirmar cómo se escribe la marca |
+| **Dowen Pagio** | Robots cortacésped y de piscina | Los de piscina en categoría aparte. Confirmar cómo se escribe |
 | **BTA** | Desmalezadoras | |
 
-## 6. Cómo se organiza la tienda
+## 10. Organización de la tienda
 
-Los clientes buscan por **lo que necesitan hacer**, no por marca. Por eso el menú principal va **por uso**, y la marca es un filtro y una página aparte.
-
-**Menú principal** *(propuesta, armada con las categorías que hoy tiene la web)*:
+El menú va **por uso**. La marca es un filtro y tiene su propia página.
 
 1. **Corte de césped:** cortadoras, tractores, robots cortacésped
 2. **Desmalezado y bordeado:** desmalezadoras, bordeadoras
 3. **Motosierras y poda:** motosierras, podadoras de altura, cortacercos, herramientas de poda
-4. **Soplado y limpieza:** sopladoras, aspiradoras, hidrolavadoras *(si venden)*
+4. **Soplado y limpieza:** sopladoras, aspiradoras
 5. **Agua:** motobombas, robots de piscina
-6. **Línea a batería:** todas las máquinas a batería juntas, más baterías y cargadores
+6. **Línea a batería:** máquinas a batería, baterías y cargadores
 7. **Césped y semillas**
 8. **Herramientas de jardín**
 9. **Repuestos y accesorios:** cadenas, espadas, tanzas, cabezales, aceites, filtros, protección personal
-10. **Marcas:** una página por marca
+10. **Marcas**
 
-**Filtros en cada categoría:** marca, tipo de motor (nafta, batería, eléctrico), uso (hogar o profesional), precio y, donde aplique, potencia, ancho de corte o largo de espada.
+**Filtros:** marca, tipo de motor (nafta, batería, eléctrico), uso (hogar o profesional), precio y, según la categoría, potencia, ancho de corte o largo de espada.
 
-## 7. Fichas de producto
+## 11. Fichas de producto
 
-### Título
+**Título: tipo de producto + marca + modelo + dato clave**, en tipo oración y con tildes.
 
-**Tipo de producto + Marca + Modelo + dato clave**
-
-- Motosierra STIHL MS 250, espada 45 cm
-- Cortadora de césped Oleo-Mac G 48 TK, a nafta, 46 cm de corte
-- Tijera de podar Bahco P121, corte bypass
-
-Mismo título en la web y en Mercado Libre (allá el catálogo puede imponer el suyo).
-
-### Estructura de la descripción
-
-1. **Para qué sirve,** en dos líneas y pensando en el cliente: *"Ideal para jardines medianos de hasta 800 m²…"*
-2. **Lo que más importa,** en 3 a 5 puntos cortos.
-3. **Ficha técnica:** tabla con los datos de la sección siguiente.
-4. **Qué trae la caja.**
-5. **Garantía y servicio:** marca, plazo y dónde se hace.
-6. **Cierre:** *"¿No sabés si es la indicada para tu terreno? Escribinos por WhatsApp y te asesoramos."*
-
-### Datos obligatorios por tipo de máquina
-
-| Tipo | Datos que no pueden faltar |
+| Hoy | Nuevo |
 |---|---|
-| A nafta | Cilindrada (cc), potencia (kW o HP), tipo de motor (2 o 4 tiempos), tanque (l), peso (kg) |
-| A batería | Voltaje (V), batería y cargador **incluidos o no**, autonomía aproximada, peso |
-| Eléctricas | Potencia (W), largo de cable si trae |
+| Motosierra MS 162 | Motosierra STIHL MS 162, espada 30 cm |
+| MOTOSIERRA ELECTRICA MSE 141 | Motosierra eléctrica STIHL MSE 141, 1400 W |
+| SOPLADOR BGE 71 | Soplador eléctrico STIHL BGE 71 |
+| CORTACERCO HSE 61 | Cortacerco eléctrico STIHL HSE 61 |
+
+*(Confirmar espada y potencia de cada modelo con la ficha oficial antes de cargarlos.)*
+
+**Descripción:** 1) para qué sirve, en dos líneas · 2) lo que más importa, en 3 a 5 puntos · 3) ficha técnica en tabla · 4) qué trae la caja · 5) garantía y servicio · 6) cierre con invitación a WhatsApp.
+
+**Datos obligatorios:**
+
+| Tipo | Datos |
+|---|---|
+| A nafta | Cilindrada (cc), potencia (kW o HP), 2 o 4 tiempos, tanque (l), peso (kg) |
+| A batería | Voltaje (V), **batería y cargador incluidos o no**, autonomía, peso |
+| Eléctricas | Potencia (W), largo de cable |
 | Cortadoras | Ancho de corte (cm), alturas de corte, bolsa (l), tracción o empuje |
 | Motosierras | Largo de espada (cm), paso de cadena |
-| Desmalezadoras | Tipo de cabezal (tanza o cuchilla), diámetro de tanza, manillar |
-| Todas | **Código de barras (EAN)**, medidas y peso **con caja** (para el envío) |
+| Desmalezadoras | Cabezal (tanza o cuchilla), diámetro de tanza, manillar |
+| Todas | **Código de barras (EAN)**, medidas y peso **con caja** |
 
-## 8. Confianza: lo que se ve en toda la tienda
+## 12. Coherencia con Mercado Libre
 
-- **Barra superior:** envío, retiro en Maipú y cuotas.
-- **Botón de WhatsApp fijo**, con un asesor real y un horario de respuesta.
-- **Sellos debajo del botón de compra:** garantía oficial, compra protegida, servicio técnico *(si tienen)*.
-- **Página "Nosotros":** quiénes son, desde cuándo, fotos reales del local y del equipo. En un rubro de máquinas caras, ver que hay un local físico pesa mucho.
-- **Ubicación con mapa** y horarios del local en el pie de página.
+- Mismo nombre, mismo ícono de perfil, mismos títulos y mismas fotos.
+- Mismos precios de lista, salvo que se defina otra política por canal. Ver [publicación en catálogo](03-publicar-en-catalogo.md).
 
-## 9. Coherencia con Mercado Libre
+## 13. Cómo aplicarlo en Tiendanube
 
-- Mismo nombre (**Silvestre**), mismo logo cuadrado y mismos títulos de producto.
-- Mismas fotos de producto: por eso las reglas de la sección 4 cumplen con las dos plataformas.
-- Mismos precios de lista, salvo que definamos otra política de precios por canal. Ver la guía de [publicación en catálogo](03-publicar-en-catalogo.md).
+1. **Plantilla:** elegir una con encabezado centrado, menú desplegable por categorías, barra de anuncios y tarjetas de producto con precio y cuotas.
+2. **Personalizar diseño → Colores:** cargar fondo `#FFFFFF`, textos `#1A1A1A`, botones `#2E7D32` con texto blanco, barra de anuncios `#F29100` con texto `#1A1A1A`, y pie `#EAF9C6` con textos `#1E5A23`.
+3. **Personalizar diseño → Tipografía:** elegir Nunito para títulos y Nunito Sans para textos si están en la lista. Si no están, usar la más parecida (redondeada para títulos y una sans legible para textos) o cargarlas por CSS.
+4. **CSS avanzado:** si el plan permite editar el CSS, pegar [`marca/silvestre-tokens.css`](marca/silvestre-tokens.css). Primero hay que mapear las variables a las clases de la plantilla elegida. Revisar en el plan del cliente si está disponible la edición de CSS.
+5. **Logo:** subir el SVG o un PNG de al menos 440 px de ancho (doble resolución). Favicon: el ícono cuadrado de 512 × 512 px.
+6. **Revisar en celular** antes de publicar: barra superior, menú, tarjeta de producto, ficha y checkout.
 
-## Pendientes para cerrar el manual
+## Pendientes
 
-- [ ] Logo en vector y sus versiones (color, blanco, negro, cuadrado)
-- [ ] Colores y tipografía del logo actual, para ajustar la sección 3
-- [ ] Captura de la web actual (portada, una categoría y una ficha de producto), para comparar antes y después
-- [ ] Confirmar dirección, horarios, teléfono y WhatsApp de ventas
-- [ ] Confirmar si tienen servicio técnico propio
-- [ ] Autorización y formato del sello "Distribuidor oficial STIHL"
-- [ ] Kits de logos oficiales de cada marca
+- [ ] Logo original en vector, para confirmar los colores `#F29100` y `#3AAA35`
+- [ ] Armar las versiones blanca, una tinta e ícono
+- [ ] Confirmar las tipografías de la propuesta
+- [ ] Mail con dominio propio
+- [ ] Confirmar horarios, WhatsApp de ventas y si tienen servicio técnico propio
+- [ ] Usuarios de Instagram y Facebook
+- [ ] Sello "Distribuidor oficial STIHL" y kits de logos de cada marca
+- [ ] Fotos del local y del equipo para "Nosotros"
 - [ ] Elegir la frase de posicionamiento
-- [ ] Elegir la plantilla de Tiendanube y definir las medidas de los banners
+- [ ] Elegir la plantilla de Tiendanube y revisar si el plan permite editar CSS

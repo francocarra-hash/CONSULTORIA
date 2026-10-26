@@ -1,0 +1,130 @@
+/*
+ * Silvestre Máquinas y Jardines: variables de marca para la web.
+ * Fuente: ../manual-de-marca-web.md (v1.0, 26/10/2026).
+ * Colores medidos sobre capturas de silvestre.com.ar: confirmar con el logo original.
+ * Antes de usarlo en Tiendanube, mapear estas variables a las clases de la plantilla elegida.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Nunito+Sans:wght@400;600;700&display=swap");
+
+:root {
+  /* Marca (logo) */
+  --sv-naranja: #F29100;
+  --sv-verde: #3AAA35;
+
+  /* Interfaz */
+  --sv-verde-accion: #2E7D32;
+  --sv-verde-accion-hover: #1E5A23;
+  --sv-verde-claro: #EAF9C6;
+  --sv-naranja-claro: #FFF4E0;
+  --sv-naranja-texto: #A35500;
+
+  /* Neutros */
+  --sv-fondo: #FFFFFF;
+  --sv-superficie: #F6F6F3;
+  --sv-borde: #E4E4DE;
+  --sv-texto: #1A1A1A;
+  --sv-texto-secundario: #5F6368;
+  --sv-error: #C0392B;
+  --sv-whatsapp: #25D366;
+
+  /* Tipografía */
+  --sv-font-titulos: "Nunito", "Trebuchet MS", sans-serif;
+  --sv-font-texto: "Nunito Sans", "Segoe UI", Roboto, Arial, sans-serif;
+
+  --sv-h1: 40px;
+  --sv-h2: 28px;
+  --sv-h-ficha: 26px;
+  --sv-texto-base: 16px;
+  --sv-texto-chico: 14px;
+  --sv-precio-tarjeta: 20px;
+  --sv-precio-ficha: 32px;
+
+  /* Formas */
+  --sv-radio: 8px;
+  --sv-boton-alto: 48px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --sv-h1: 28px;
+    --sv-h2: 22px;
+    --sv-h-ficha: 20px;
+    --sv-texto-chico: 13px;
+    --sv-precio-tarjeta: 18px;
+    --sv-precio-ficha: 26px;
+  }
+}
+
+/* Usos base: reemplazar los selectores por los de la plantilla */
+body {
+  background: var(--sv-fondo);
+  color: var(--sv-texto);
+  font-family: var(--sv-font-texto);
+  font-size: var(--sv-texto-base);
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: var(--sv-font-titulos);
+  line-height: 1.2;
+}
+
+h1 { font-size: var(--sv-h1); font-weight: 800; }
+h2 { font-size: var(--sv-h2); font-weight: 700; }
+
+a { color: var(--sv-verde-accion); }
+a:hover { color: var(--sv-verde-accion-hover); }
+
+.sv-barra-superior {
+  background: var(--sv-naranja);
+  color: var(--sv-texto);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.sv-boton {
+  min-height: var(--sv-boton-alto);
+  padding: 0 24px;
+  border: 0;
+  border-radius: var(--sv-radio);
+  background: var(--sv-verde-accion);
+  color: #FFFFFF;
+  font-family: var(--sv-font-texto);
+  font-weight: 600;
+}
+.sv-boton:hover { background: var(--sv-verde-accion-hover); }
+
+.sv-boton--secundario {
+  background: transparent;
+  color: var(--sv-verde-accion);
+  border: 2px solid var(--sv-verde-accion);
+}
+.sv-boton--secundario:hover {
+  background: var(--sv-verde-claro);
+  color: var(--sv-verde-accion-hover);
+}
+
+.sv-boton--whatsapp {
+  background: var(--sv-whatsapp);
+  color: var(--sv-texto);
+}
+
+.sv-precio { color: var(--sv-texto); font-weight: 700; }
+.sv-cuotas { color: var(--sv-texto-secundario); font-size: var(--sv-texto-chico); }
+
+.sv-etiqueta {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.sv-etiqueta--oferta { background: var(--sv-naranja); color: var(--sv-texto); }
+.sv-etiqueta--envio { background: var(--sv-verde-claro); color: var(--sv-verde-accion-hover); }
+.sv-etiqueta--bateria { background: var(--sv-superficie); color: var(--sv-texto); }
+
+.sv-pie {
+  background: var(--sv-verde-claro);
+  color: var(--sv-verde-accion-hover);
+}
