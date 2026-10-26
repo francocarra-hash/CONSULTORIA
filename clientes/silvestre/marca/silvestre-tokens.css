@@ -1,21 +1,28 @@
 /*
  * Silvestre Máquinas y Jardines: variables de marca para la web.
- * Fuente: ../manual-de-marca-web.md (v1.0, 26/10/2026).
- * Colores medidos sobre capturas de silvestre.com.ar: confirmar con el logo original.
+ * Fuente: ../manual-de-marca-web.md (v2.0, 26/10/2026).
+ * Colores oficiales del kit de marca (SV - Kit de MARCA, 2024) y derivados para la web.
  * Antes de usarlo en Tiendanube, mapear estas variables a las clases de la plantilla elegida.
  */
 
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Nunito+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap");
 
 :root {
   /* Marca (logo) */
   --sv-naranja: #F29100;
-  --sv-verde: #3AAA35;
+  --sv-verde: #39A935;
+  --sv-salvia: #559E72;
+  --sv-menta: #93E98B;
+  --sv-terracota: #C16F1E;
+  --sv-durazno: #FFAF8D;
+  --sv-rosa-arena: #FFCDBB;
 
   /* Interfaz */
   --sv-verde-accion: #2E7D32;
   --sv-verde-accion-hover: #1E5A23;
-  --sv-verde-claro: #EAF9C6;
+  --sv-verde-claro: #EAF9C7;
+  --sv-verde-noche: #143D18;
+  --sv-arena: #F7F6F2;
   --sv-naranja-claro: #FFF4E0;
   --sv-naranja-texto: #A35500;
 
@@ -29,12 +36,12 @@
   --sv-whatsapp: #25D366;
 
   /* Tipografía */
-  --sv-font-titulos: "Nunito", "Trebuchet MS", sans-serif;
-  --sv-font-texto: "Nunito Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --sv-font-titulos: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --sv-font-texto: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-  --sv-h1: 40px;
-  --sv-h2: 28px;
-  --sv-h-ficha: 26px;
+  --sv-h1: 56px;
+  --sv-h2: 38px;
+  --sv-h-ficha: 28px;
   --sv-texto-base: 16px;
   --sv-texto-chico: 14px;
   --sv-precio-tarjeta: 20px;
@@ -47,9 +54,9 @@
 
 @media (max-width: 767px) {
   :root {
-    --sv-h1: 28px;
-    --sv-h2: 22px;
-    --sv-h-ficha: 20px;
+    --sv-h1: 36px;
+    --sv-h2: 28px;
+    --sv-h-ficha: 22px;
     --sv-texto-chico: 13px;
     --sv-precio-tarjeta: 18px;
     --sv-precio-ficha: 26px;
@@ -77,8 +84,8 @@ a { color: var(--sv-verde-accion); }
 a:hover { color: var(--sv-verde-accion-hover); }
 
 .sv-barra-superior {
-  background: var(--sv-naranja);
-  color: var(--sv-texto);
+  background: var(--sv-texto);
+  color: #FFFFFF;
   font-weight: 600;
   font-size: 14px;
 }
@@ -125,6 +132,6 @@ a:hover { color: var(--sv-verde-accion-hover); }
 .sv-etiqueta--bateria { background: var(--sv-superficie); color: var(--sv-texto); }
 
 .sv-pie {
-  background: var(--sv-verde-claro);
-  color: var(--sv-verde-accion-hover);
+  background: var(--sv-texto);
+  color: rgba(255, 255, 255, 0.78);
 }

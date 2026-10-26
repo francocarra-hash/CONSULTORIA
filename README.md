@@ -28,7 +28,7 @@
 
 | Cliente | Documento | Estado |
 |---|---|---|
-| Silvestre Máquinas y Jardines (Maipú, Mendoza) | [Paso 1: alta en Mercado Libre](clientes/silvestre/01-alta-mercado-libre.md) · Paso 2: Tiendanube *(pendiente)* · [Paso 3: publicar en catálogo](clientes/silvestre/03-publicar-en-catalogo.md) · [Manual de marca para la web](clientes/silvestre/manual-de-marca-web.md) ([PDF](clientes/silvestre/marca/silvestre-manual-de-marca.pdf), [versión visual](https://claude.ai/artifact/TSSiUPGXJFENHWvWw1saFa), archivos en [`sistema-de-diseno/`](clientes/silvestre/sistema-de-diseno/)) | Juntando datos del cliente |
+| Silvestre Máquinas y Jardines (Maipú, Mendoza) | [Paso 1: alta en Mercado Libre](clientes/silvestre/01-alta-mercado-libre.md) · Paso 2: Tiendanube *(pendiente)* · [Paso 3: publicar en catálogo](clientes/silvestre/03-publicar-en-catalogo.md) · [Manual de marca para la web](clientes/silvestre/manual-de-marca-web.md) ([PDF](clientes/silvestre/marca/silvestre-manual-de-marca.pdf), [maqueta de la portada](clientes/silvestre/web/portada-prototipo.html), [versión visual](https://claude.ai/artifact/TSSiUPGXJFENHWvWw1saFa), archivos en [`sistema-de-diseno/`](clientes/silvestre/sistema-de-diseno/)) | Juntando datos del cliente |
 
 ## Presentación comercial
 

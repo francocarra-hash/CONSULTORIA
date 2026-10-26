@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Silvestre · Tienda online</title>
+<style>
+@font-face { font-family: "Montserrat"; src: url({{FONT}}) format("woff2"); font-weight: 400 900; }
+/* Portada de la tienda: grilla de 1200px, encabezado con logo a la izquierda y buscador protagonista. */
+:root {
+  --naranja: #F29100; --naranja-claro: #FFF4E0; --terracota: #C16F1E; --verde: #39A935; --salvia: #559E72;
+  --verde-accion: #2E7D32; --verde-profundo: #1E5A23; --verde-noche: #143D18; --verde-claro: #EAF9C7;
+  --fondo: #FFFFFF; --arena: #F7F6F2; --borde: #E6E4DD; --texto: #1A1A1A; --gris: #5F6368;
+  --whatsapp: #25D366;
+  --f: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+  --ft: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+  --r: 8px; --r-lg: 16px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--fondo); color: var(--texto); font-family: var(--f); font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+.i { width: 22px; height: 22px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.eyebrow { font-family: var(--ft); font-size: 11.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--verde-accion); }
+h1, h2, h3, .terreno strong, .trust strong, .cat strong, .foot h4 { font-family: var(--ft); }
+h1, h2, h3 { margin: 0; letter-spacing: -.025em; text-wrap: balance; }
+:where(a, button, input):focus-visible { outline: 2px solid var(--verde-profundo); outline-offset: 2px; border-radius: 4px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: var(--r); border: 2px solid var(--verde-accion); background: var(--verde-accion); color: #fff; font: 700 15px/1 var(--ft); cursor: pointer; transition: background .15s; }
+.btn:hover { background: var(--verde-profundo); border-color: var(--verde-profundo); }
+.btn--ghost { background: transparent; color: var(--texto); border-color: var(--texto); }
+.btn--ghost:hover { background: var(--texto); color: #fff; border-color: var(--texto); }
+.btn--light { background: #fff; color: var(--verde-profundo); border-color: #fff; }
+.btn--light:hover { background: var(--verde-claro); border-color: var(--verde-claro); }
+.btn--wa { background: var(--whatsapp); border-color: var(--whatsapp); color: var(--texto); }
+.btn--wa:hover { background: #1fbd5a; border-color: #1fbd5a; }
+
+/* Barra de anuncios */
+.anuncio { background: var(--texto); color: #fff; font-size: 13px; font-weight: 600; }
+.anuncio .wrap { display: flex; justify-content: space-between; align-items: center; min-height: 38px; gap: 16px; }
+.anuncio-msgs { display: flex; gap: 28px; }
+.anuncio-msgs span { display: inline-flex; gap: 8px; align-items: center; }
+.anuncio-msgs .i { width: 16px; height: 16px; color: var(--naranja); }
+.anuncio-ayuda { color: rgba(255,255,255,.8); }
+
+/* Encabezado */
+.head { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(255,255,255,.96); backdrop-filter: blur(8px); border-bottom: 1px solid var(--borde); }
+.head-row { display: grid; grid-template-columns: 200px 1fr auto; align-items: center; gap: 32px; min-height: 84px; }
+.logo { width: 200px; }
+.search { display: flex; align-items: center; gap: 10px; height: 50px; padding: 0 6px 0 18px; border: 1.5px solid var(--texto); border-radius: 999px; background: #fff; }
+.search input { flex: 1; border: 0; outline: 0; font: 500 15px var(--f); background: transparent; color: var(--texto); min-width: 0; }
+.search input::placeholder { color: var(--gris); }
+.search button { height: 38px; padding: 0 18px; border-radius: 999px; border: 0; background: var(--verde-accion); color: #fff; font: 700 14px var(--f); cursor: pointer; }
+.head-acc { display: flex; gap: 22px; align-items: center; font-size: 13px; font-weight: 700; }
+.head-acc a { display: flex; flex-direction: column; align-items: center; gap: 2px; position: relative; }
+.head-acc .badge { position: absolute; top: -6px; right: -2px; min-width: 18px; height: 18px; border-radius: 9px; background: var(--naranja); color: var(--texto); font-size: 11px; display: grid; place-items: center; font-weight: 800; }
+.nav { display: flex; gap: 4px; align-items: center; height: 50px; font-size: 14.5px; font-weight: 700; overflow-x: auto; scrollbar-width: none; }
+.nav a { padding: 8px 14px; border-radius: 999px; white-space: nowrap; }
+.nav a:hover { background: var(--arena); }
+.nav a.act { background: var(--verde-claro); color: var(--verde-profundo); }
+.nav .sep { flex: 1; }
+.nav .promo { color: var(--naranja); }
+.burger { display: none; }
+
+/* Hero */
+.hero { padding: 28px 0 0; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 20px; }
+.hero-main { position: relative; overflow: hidden; border-radius: 24px; background: var(--verde-noche); color: #fff; min-height: 520px; padding: 56px; display: flex; flex-direction: column; justify-content: flex-end; }
+.hero-main .rama { position: absolute; right: -30px; top: -20px; width: 360px; opacity: .14; }
+.hero-main h1 { font-size: 58px; line-height: 1.02; font-weight: 800; max-width: 560px; }
+.hero-main p { font-size: 18px; color: rgba(255,255,255,.82); max-width: 470px; margin: 18px 0 30px; }
+.hero-main .eyebrow { color: var(--naranja); margin-bottom: 18px; }
+.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero-trust { display: flex; gap: 22px; margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.16); font-size: 14px; font-weight: 600; color: rgba(255,255,255,.88); flex-wrap: wrap; }
+.hero-trust span { display: inline-flex; gap: 8px; align-items: center; }
+.hero-trust .i { color: var(--naranja); width: 20px; height: 20px; }
+.hero-side { display: grid; grid-template-rows: 1fr 1fr; gap: 20px; }
+.promo-card { position: relative; overflow: hidden; border-radius: 24px; padding: 30px; display: flex; flex-direction: column; justify-content: space-between; min-height: 250px; }
+.promo-card h3 { font-size: 28px; line-height: 1.08; font-weight: 800; max-width: 230px; }
+.promo-card .eyebrow { margin-bottom: 10px; display: block; }
+.promo-card .pedestal { position: absolute; right: 22px; top: 22px; bottom: 22px; width: 52%; border-radius: 18px; background: #fff; display: grid; place-items: center; padding: 18px; }
+.promo-card .pedestal img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.promo-card > div:first-child, .promo-card .link { max-width: 44%; }
+.promo-card .link { display: inline-flex; gap: 6px; align-items: center; font-weight: 800; font-size: 15px; position: relative; z-index: 1; }
+.promo-card .precio { font-size: 15px; font-weight: 600; margin-top: 8px; }
+.promo-card .precio b { font-size: 24px; display: block; }
+.pc-naranja { background: var(--naranja); }
+.pc-naranja .eyebrow { color: var(--texto); }
+.pc-claro { background: var(--verde-claro); }
+.pc-claro .eyebrow { color: var(--verde-profundo); }
+
+/* Franja de confianza */
+.trust { margin-top: 20px; display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--borde); border-radius: var(--r-lg); }
+.trust > div { display: flex; gap: 14px; align-items: center; padding: 22px 24px; }
+.trust > div + div { border-left: 1px solid var(--borde); }
+.trust .i { width: 30px; height: 30px; color: var(--verde-accion); stroke-width: 1.6; }
+.trust strong { display: block; font-size: 15px; }
+.trust span { font-size: 13px; color: var(--gris); }
+
+/* Secciones */
+.sec { padding: 88px 0 0; }
+.sec-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 28px; }
+.sec-head h2 { font-size: 38px; line-height: 1.1; font-weight: 800; margin-top: 10px; }
+.sec-head a { font-weight: 800; font-size: 15px; display: inline-flex; gap: 6px; align-items: center; color: var(--verde-accion); white-space: nowrap; }
+
+/* Categorías */
+.cats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; }
+.cat { background: var(--arena); border-radius: var(--r-lg); padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 10px; transition: transform .15s, box-shadow .15s; }
+.cat:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba(26,26,26,.08); }
+.cat-img { aspect-ratio: 1; display: grid; place-items: center; }
+.cat-img img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.cat-img .i { width: 56px; height: 56px; color: var(--verde-accion); stroke-width: 1.3; }
+.cat strong { font-size: 15px; line-height: 1.25; }
+.cat span { font-size: 13px; color: var(--gris); }
+
+/* Asesor por terreno */
+.asesor { background: var(--arena); border-radius: 28px; padding: 56px; display: grid; grid-template-columns: .9fr 2fr; gap: 48px; align-items: center; }
+.asesor h2 { font-size: 38px; line-height: 1.1; font-weight: 800; margin: 10px 0 14px; }
+.asesor p { color: var(--gris); margin: 0 0 22px; }
+.terrenos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.terreno { background: #fff; border: 1px solid var(--borde); border-radius: var(--r-lg); padding: 24px; display: flex; flex-direction: column; gap: 14px; transition: border-color .15s; }
+.terreno:hover { border-color: var(--verde-accion); }
+.terreno-ic { width: 56px; height: 56px; border-radius: 14px; display: grid; place-items: center; background: var(--verde-claro); color: var(--verde-profundo); }
+.terreno-ic .i { width: 30px; height: 30px; }
+.terreno strong { font-size: 19px; }
+.terreno small { font-size: 13px; color: var(--gris); font-weight: 600; }
+.terreno ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; font-size: 14px; }
+.terreno li { display: flex; gap: 8px; align-items: center; }
+.terreno li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--naranja); flex: none; }
+.terreno .go { margin-top: auto; font-weight: 800; font-size: 14px; color: var(--verde-accion); display: inline-flex; gap: 6px; align-items: center; }
+
+/* Productos */
+.prods { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.card { position: relative; display: flex; flex-direction: column; border-radius: var(--r-lg); background: #fff; }
+.card-img { position: relative; aspect-ratio: 1; border-radius: var(--r-lg); background: var(--arena); display: grid; place-items: center; padding: 26px; overflow: hidden; }
+.card-img img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; transition: transform .25s; }
+.card:hover .card-img img { transform: scale(1.04); }
+.tags { position: absolute; top: 14px; left: 14px; display: flex; gap: 6px; }
+.tag { display: inline-flex; gap: 4px; align-items: center; padding: 4px 9px; border-radius: 6px; font-size: 12px; font-weight: 800; }
+.tag .i { width: 14px; height: 14px; stroke-width: 2.2; }
+.t-of { background: var(--naranja); color: var(--texto); }
+.t-en { background: #fff; color: var(--verde-profundo); }
+.t-mo { background: #fff; color: var(--texto); }
+.fav { position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; border-radius: 50%; background: #fff; display: grid; place-items: center; overflow: hidden; }
+.fav .i { width: 18px; height: 18px; }
+.card-body { padding: 16px 4px 0; display: flex; flex-direction: column; gap: 4px; }
+.c-marca { font-size: 12px; font-weight: 800; letter-spacing: .08em; color: var(--gris); }
+.c-nom { font-size: 16px; font-weight: 700; line-height: 1.35; min-height: 43px; }
+.c-pre { display: flex; align-items: baseline; gap: 10px; margin-top: 6px; }
+.c-pre b { font-size: 22px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.c-pre s { font-size: 14px; color: var(--gris); }
+.c-cuo { font-size: 14px; color: var(--verde-accion); font-weight: 700; }
+.c-add { margin-top: 12px; min-height: 44px; font-size: 15px; width: 100%; }
+
+/* Banner batería */
+.bateria { position: relative; overflow: hidden; border-radius: 28px; background: var(--naranja); display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; min-height: 360px; }
+.bateria-txt { padding: 56px; position: relative; z-index: 1; }
+.bateria .eyebrow { color: var(--texto); }
+.bateria h2 { font-size: 46px; line-height: 1.04; font-weight: 800; margin: 12px 0 16px; }
+.bateria p { font-size: 17px; max-width: 420px; margin: 0 0 26px; }
+.bateria-bullets { display: flex; gap: 18px; margin-bottom: 28px; font-weight: 700; font-size: 14px; flex-wrap: wrap; }
+.bateria-bullets span { display: inline-flex; gap: 6px; align-items: center; }
+.bateria-art { position: relative; height: 100%; min-height: 360px; }
+.bateria-art .disco { position: absolute; right: 40px; top: 50%; width: 400px; height: 400px; transform: translateY(-50%); border-radius: 50%; background: #fff; display: grid; place-items: center; overflow: hidden; }
+.bateria-art .disco img { width: 82%; mix-blend-mode: multiply; }
+.btn--dark { background: var(--texto); border-color: var(--texto); }
+.btn--dark:hover { background: #000; border-color: #000; }
+
+/* Marcas */
+.marcas { display: grid; grid-template-columns: repeat(6, 1fr); border-top: 1px solid var(--borde); border-left: 1px solid var(--borde); }
+.marca { height: 110px; display: grid; place-items: center; border-right: 1px solid var(--borde); border-bottom: 1px solid var(--borde); font-weight: 800; font-size: 19px; color: #9A9A93; letter-spacing: .02em; text-align: center; padding: 10px; transition: color .15s, background .15s; }
+.marca:hover { color: var(--texto); background: var(--arena); }
+.marca small { display: block; font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #B8B6AE; margin-top: 4px; }
+
+/* Servicio */
+.servicio { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.serv-card { border-radius: 28px; padding: 48px; display: flex; flex-direction: column; gap: 16px; min-height: 340px; }
+.serv-card h3 { font-size: 34px; line-height: 1.1; font-weight: 800; }
+.serv-card p { margin: 0; font-size: 16px; max-width: 440px; }
+.serv-card .btn { align-self: flex-start; margin-top: auto; }
+.sc-dark { background: var(--verde-noche); color: #fff; }
+.sc-dark p { color: rgba(255,255,255,.8); }
+.sc-dark .eyebrow { color: var(--naranja); }
+.sc-photo { position: relative; overflow: hidden; color: #fff; background: #222 center/cover; }
+.sc-photo::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,61,24,.15), rgba(20,61,24,.92)); }
+.sc-photo > * { position: relative; }
+.sc-photo .eyebrow { color: var(--verde-claro); }
+.sc-photo p { color: rgba(255,255,255,.85); }
+.direccion { display: flex; gap: 10px; align-items: center; font-weight: 700; margin-top: auto; }
+
+/* Newsletter + pie */
+.news { margin-top: 88px; background: var(--verde-claro); }
+.news .wrap { display: flex; justify-content: space-between; align-items: center; gap: 30px; padding-block: 44px; flex-wrap: wrap; }
+.news h3 { font-size: 26px; font-weight: 800; color: var(--verde-profundo); }
+.news p { margin: 4px 0 0; color: var(--verde-profundo); }
+.news form { display: flex; gap: 10px; flex: 0 1 460px; min-width: 0; }
+.news input { flex: 1; min-width: 0; height: 52px; border-radius: var(--r); border: 1.5px solid var(--verde-profundo); padding: 0 16px; font: 500 15px var(--f); background: #fff; }
+.foot { background: var(--texto); color: rgba(255,255,255,.78); font-size: 14px; }
+.foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 40px; padding-block: 56px 40px; }
+.foot h4 { margin: 0 0 14px; color: #fff; font-size: 15px; }
+.foot ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 9px; }
+.foot a:hover { color: #fff; }
+.foot-logo { width: 200px; margin-bottom: 18px; }
+.foot-contact li { display: flex; gap: 10px; align-items: center; }
+.foot-contact .i { width: 18px; height: 18px; color: var(--naranja); }
+.foot-legal { border-top: 1px solid rgba(255,255,255,.12); }
+.foot-legal .wrap { display: flex; justify-content: space-between; gap: 20px; padding-block: 18px; font-size: 12.5px; flex-wrap: wrap; }
+.foot-legal a { text-decoration: underline; }
+.pagos { display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; }
+.pagos span { border: 1px solid rgba(255,255,255,.2); border-radius: 6px; padding: 5px 10px; font-size: 12px; font-weight: 700; color: #fff; }
+.wa-float { position: fixed; right: max(20px, env(safe-area-inset-right, 0px)); bottom: max(20px, env(safe-area-inset-bottom, 0px)); z-index: 30; display: flex; align-items: center; gap: 10px; background: var(--whatsapp); color: var(--texto); font-weight: 800; font-size: 14px; padding: 12px 18px 12px 14px; border-radius: 999px; box-shadow: 0 10px 26px rgba(0,0,0,.18); }
+.wa-float .i { width: 24px; height: 24px; }
+
+/* Celular */
+@media (max-width: 900px) {
+  .wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .anuncio-msgs span:not(:first-child), .anuncio-ayuda { display: none; }
+  .anuncio .wrap { justify-content: center; }
+  .head-row { grid-template-columns: auto 1fr auto; gap: 12px; min-height: 64px; }
+  .burger { display: grid; place-items: center; width: 40px; height: 40px; border: 0; background: none; padding: 0; color: var(--texto); }
+  .logo { width: 132px; justify-self: center; }
+  .head-row .search { grid-column: 1 / -1; order: 3; height: 46px; margin-bottom: 12px; }
+  .head-acc { gap: 14px; }
+  .head-acc a span, .head-acc .hide-m { display: none; }
+  .nav { height: 46px; border-top: 1px solid var(--borde); margin: 0 -16px; padding: 0 12px; font-size: 14px; }
+  .nav .sep, .nav .promo { display: none; }
+  .hero { padding-top: 16px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 12px; }
+  .hero-main { min-height: 0; padding: 32px 24px 28px; border-radius: 20px; }
+  .hero-main h1 { font-size: 36px; }
+  .hero-main p { font-size: 16px; margin: 12px 0 22px; }
+  .hero-ctas .btn { flex: 1; }
+  .hero-trust { gap: 12px 18px; margin-top: 26px; padding-top: 18px; font-size: 13px; }
+  .hero-side { grid-template-rows: none; grid-template-columns: 1fr; gap: 12px; }
+  .promo-card { min-height: 180px; padding: 20px; border-radius: 18px; }
+  .promo-card h3 { font-size: 21px; }
+  .promo-card .pedestal { right: 14px; top: 14px; bottom: 14px; width: 46%; padding: 10px; border-radius: 14px; }
+  .promo-card > div:first-child, .promo-card .link { max-width: 50%; }
+  .promo-card .precio b { font-size: 18px; }
+  .search .hide-m, .hide-sm { display: none; }
+  .trust { grid-template-columns: 1fr 1fr; }
+  .trust > div { padding: 14px; gap: 10px; min-width: 0; }
+  .trust strong { font-size: 13.5px; line-height: 1.25; }
+  .trust > div + div { border-left: 0; }
+  .trust > div:nth-child(even) { border-left: 1px solid var(--borde); }
+  .trust > div:nth-child(n+3) { border-top: 1px solid var(--borde); }
+  .trust .i { width: 24px; height: 24px; }
+  .trust span { display: none; }
+  .sec { padding-top: 56px; }
+  .sec-head h2, .asesor h2 { font-size: 28px; }
+  .cats { grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .cat { padding: 12px; }
+  .cat strong { font-size: 13px; }
+  .cat span { display: none; }
+  .asesor { grid-template-columns: 1fr; padding: 28px 20px; gap: 22px; border-radius: 20px; }
+  .terrenos { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 80%; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -20px; padding: 0 20px 6px; scrollbar-width: none; }
+  .terreno { scroll-snap-align: start; }
+  .prods { grid-template-columns: 1fr 1fr; gap: 14px 12px; }
+  .card-img { padding: 14px; }
+  .c-nom { font-size: 14px; min-height: 57px; }
+  .c-pre b { font-size: 18px; }
+  .c-pre s { display: none; }
+  .c-cuo { font-size: 12.5px; }
+  .c-add { font-size: 14px; padding: 0 10px; }
+  .fav { display: none; }
+  .bateria { grid-template-columns: 1fr; border-radius: 20px; }
+  .bateria-txt { padding: 30px 22px 0; }
+  .bateria h2 { font-size: 32px; }
+  .bateria-art { min-height: 300px; }
+  .bateria-art .disco { width: 260px; height: 260px; right: 50%; transform: translate(50%, -50%); }
+  .marcas { grid-template-columns: repeat(3, 1fr); }
+  .marca { height: 84px; font-size: 15px; }
+  .servicio { grid-template-columns: 1fr; gap: 12px; }
+  .serv-card { padding: 30px 22px; min-height: 0; border-radius: 20px; }
+  .serv-card h3 { font-size: 26px; }
+  .news form { flex-basis: 100%; width: 100%; }
+  .news .wrap > div { min-width: 0; }
+  .news .btn { padding: 0 16px; }
+  .foot-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .foot-grid > div:first-child { grid-column: 1 / -1; }
+  .wa-float span { display: none; }
+  .wa-float { padding: 14px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-camion" viewBox="0 0 24 24"><path d="M2.5 6.5h11v9h-11z"/><path d="M13.5 9.5h4l3 3.2v2.8h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+  <symbol id="i-local" viewBox="0 0 24 24"><path d="M3.5 10l1.5-5.5h14L20.5 10"/><path d="M3.5 10c0 1.7 1.3 2.8 2.9 2.8S9.3 11.7 9.3 10c0 1.7 1.3 2.8 2.7 2.8s2.7-1.1 2.7-2.8c0 1.7 1.3 2.8 2.9 2.8s2.9-1.1 2.9-2.8"/><path d="M5 12.6V20h14v-7.4"/><path d="M10 20v-4.5h4V20"/></symbol>
+  <symbol id="i-cuotas" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M2.5 9.5h19"/><path d="M6 15h4"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.2-7.5 9.5-4.3-1.3-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4"/></symbol>
+  <symbol id="i-llave" viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 0 0 5 5L13 18a2.1 2.1 0 0 1-3-3l6.5-6.5"/><path d="M14.5 6.5L17 4l3 3-2.5 2.5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4.5 19.5l1.2-3.6A7.5 7.5 0 1 1 8.6 18.6z"/><path d="M9.2 9.5c.3 2 2.3 4.1 4.6 4.6l1-1.1 1.8.8c-.2 1.2-1.2 1.9-2.3 1.7-3-.5-5.6-3.1-6-6-.2-1.1.5-2.1 1.7-2.3l.8 1.8z"/></symbol>
+  <symbol id="i-lupa" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></symbol>
+  <symbol id="i-usuario" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.5 20.5c1.2-3.8 4-5.5 7.5-5.5s6.3 1.7 7.5 5.5"/></symbol>
+  <symbol id="i-carrito" viewBox="0 0 24 24"><path d="M3 4h2.5l2.2 11h10.6l2-8H7"/><circle cx="9.5" cy="19.5" r="1.3"/><circle cx="17" cy="19.5" r="1.3"/></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-bateria" viewBox="0 0 24 24"><rect x="3" y="7.5" width="16" height="9" rx="2"/><path d="M21 10.5v3"/><path d="M11.5 9l-2 3h3l-2 3"/></symbol>
+  <symbol id="i-rayo" viewBox="0 0 24 24"><path d="M13 2.5L5 13.5h6l-1 8 8-11h-6z"/></symbol>
+  <symbol id="i-corazon" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></symbol>
+  <symbol id="i-cesped" viewBox="0 0 24 24"><path d="M3 20h18"/><path d="M5 20c0-4 1-7 3-9"/><path d="M9 20c0-5 1.5-9 4-12"/><path d="M14 20c0-3.5 1-6.5 3-8.5"/><path d="M18 20c0-2.5.5-4.5 2-6"/></symbol>
+  <symbol id="i-casa" viewBox="0 0 24 24"><path d="M3.5 11L12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M3 20h18"/></symbol>
+  <symbol id="i-arbol" viewBox="0 0 24 24"><path d="M12 21v-6"/><path d="M12 3a5 5 0 0 0-4.6 7A4 4 0 0 0 9 17h6a4 4 0 0 0 1.6-7A5 5 0 0 0 12 3z"/></symbol>
+  <symbol id="i-vid" viewBox="0 0 24 24"><circle cx="9" cy="13" r="2.3"/><circle cx="14" cy="13" r="2.3"/><circle cx="11.5" cy="17.2" r="2.3"/><circle cx="16.5" cy="9" r="0"/><path d="M11.5 10.5V7c0-1.5 1-2.5 2.5-3"/><path d="M11.5 7c-2-1.5-4-1-5 .5"/></symbol>
+  <symbol id="i-gota" viewBox="0 0 24 24"><path d="M12 3.5c3.5 4.5 6 7.8 6 10.8a6 6 0 0 1-12 0c0-3 2.5-6.3 6-10.8z"/></symbol>
+  <symbol id="i-semilla" viewBox="0 0 24 24"><path d="M12 21v-8"/><path d="M12 13c0-4-3-7-7.5-7 0 4.5 3 7 7.5 7z"/><path d="M12 15c0-3.5 2.5-6 6.5-6 0 4-2.5 6-6.5 6z"/></symbol>
+  <symbol id="i-tuerca" viewBox="0 0 24 24"><path d="M12 2.8l8 4.6v9.2l-8 4.6-8-4.6V7.4z"/><circle cx="12" cy="12" r="3.2"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+</svg>
+
+<div class="anuncio"><div class="wrap">
+  <div class="anuncio-msgs">
+    <span><svg class="i"><use href="#i-camion"/></svg>Envíos a todo el país</span>
+    <span><svg class="i"><use href="#i-local"/></svg>Retiro gratis en Maipú</span>
+    <span><svg class="i"><use href="#i-cuotas"/></svg>Hasta 6 cuotas sin interés</span>
+  </div>
+  <a class="anuncio-ayuda" href="#">¿Necesitás ayuda? (261) 242-6888</a>
+</div></div>
+
+<header class="head">
+  <div class="wrap head-row">
+    <button class="burger" aria-label="Abrir menú"><svg class="i"><use href="#i-menu"/></svg></button>
+    <a href="#" aria-label="Silvestre, inicio"><img class="logo" src="{{LOGO}}" alt="Silvestre máquinas y jardines"></a>
+    <form class="search" role="search" onsubmit="event.preventDefault()">
+      <svg class="i"><use href="#i-lupa"/></svg>
+      <input id="buscar" type="search" placeholder="Buscá por máquina, marca o modelo" aria-label="Buscar productos">
+      <button type="submit" class="hide-m">Buscar</button>
+    </form>
+    <nav class="head-acc" aria-label="Cuenta">
+      <a href="#" class="hide-m"><svg class="i"><use href="#i-chat"/></svg><span>Asesoramiento</span></a>
+      <a href="#"><svg class="i"><use href="#i-usuario"/></svg><span>Mi cuenta</span></a>
+      <a href="#"><svg class="i"><use href="#i-carrito"/></svg><span>Carrito</span><b class="badge">2</b></a>
+    </nav>
+  </div>
+  <div class="wrap">
+    <nav class="nav" aria-label="Categorías">
+      <a href="#" class="act">Corte de césped</a><a href="#">Desmalezado</a><a href="#">Motosierras y poda</a><a href="#">Soplado</a><a href="#">Agua</a><a href="#">Línea a batería</a><a href="#">Herramientas</a><a href="#">Repuestos</a><a href="#">Marcas</a>
+      <span class="sep"></span><a href="#" class="promo">Ofertas</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero"><div class="wrap hero-grid">
+  <div class="hero-main" style="background-image:linear-gradient(90deg, rgba(20,61,24,.96) 0%, rgba(20,61,24,.84) 55%, rgba(20,61,24,.5) 100%), url({{BOSQUEKIT}}); background-size: cover; background-position: center">
+    <svg class="rama" viewBox="0 0 200 420" aria-hidden="true">{{RAMA}}</svg>
+    <span class="eyebrow">Distribuidor oficial STIHL · Maipú, Mendoza</span>
+    <h1>Máquinas para tu jardín y tu campo.</h1>
+    <p>Te asesoramos para que elijas la máquina justa para tu terreno. Con garantía oficial, repuestos y servicio.</p>
+    <div class="hero-ctas">
+      <a class="btn btn--light" href="#">Ver productos <svg class="i"><use href="#i-flecha"/></svg></a>
+      <a class="btn btn--wa" href="#"><svg class="i"><use href="#i-chat"/></svg>Hablá con un asesor</a>
+    </div>
+    <div class="hero-trust">
+      <span><svg class="i"><use href="#i-escudo"/></svg>Garantía oficial</span>
+      <span><svg class="i"><use href="#i-llave"/></svg>Repuestos originales</span>
+      <span><svg class="i"><use href="#i-camion"/></svg>Envíos a todo el país</span>
+    </div>
+  </div>
+  <div class="hero-side">
+    <a class="promo-card pc-naranja" href="#">
+      <div><span class="eyebrow">Temporada de poda</span><h3>Motosierras STIHL</h3><div class="precio">Desde<b>$ 389.900</b></div></div>
+      <span class="link">Ver modelos <svg class="i"><use href="#i-flecha"/></svg></span>
+      <span class="pedestal"><img src="{{MS162}}" alt=""></span>
+    </a>
+    <a class="promo-card pc-claro" href="#">
+      <div><span class="eyebrow">Desmalezado</span><h3>Para terrenos grandes</h3><div class="precio">Hasta<b>6 cuotas sin interés</b></div></div>
+      <span class="link">Ver modelos <svg class="i"><use href="#i-flecha"/></svg></span>
+      <span class="pedestal"><img src="{{FS}}" alt=""></span>
+    </a>
+  </div>
+</div>
+<div class="wrap"><div class="trust">
+  <div><svg class="i"><use href="#i-escudo"/></svg><div><strong>Distribuidor oficial</strong><span>STIHL y marcas líderes</span></div></div>
+  <div><svg class="i"><use href="#i-chat"/></svg><div><strong>Asesoramiento real</strong><span>Te ayudamos a elegir</span></div></div>
+  <div><svg class="i"><use href="#i-llave"/></svg><div><strong>Repuestos y servicio</strong><span>Después de la compra</span></div></div>
+  <div><svg class="i"><use href="#i-local"/></svg><div><strong>Retiro en Maipú</strong><span>O envío a todo el país</span></div></div>
+</div></div>
+</section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">Categorías</span><h2>¿Qué necesitás hacer?</h2></div><a href="#">Ver todas <svg class="i"><use href="#i-flecha"/></svg></a></div>
+  <div class="cats">
+    <a class="cat" href="#"><div class="cat-img"><svg class="i"><use href="#i-cesped"/></svg></div><strong>Corte de césped</strong><span>Cortadoras, tractores y robots</span></a>
+    <a class="cat" href="#"><div class="cat-img"><img src="{{FS}}" alt=""></div><strong>Desmalezado y bordeado</strong><span>Desmalezadoras y bordeadoras</span></a>
+    <a class="cat" href="#"><div class="cat-img"><img src="{{MS194T}}" alt=""></div><strong>Motosierras y poda</strong><span>Motosierras y cortacercos</span></a>
+    <a class="cat" href="#"><div class="cat-img"><img src="{{BGE71}}" alt=""></div><strong>Soplado y limpieza</strong><span>Sopladoras y aspiradoras</span></a>
+    <a class="cat" href="#"><div class="cat-img"><svg class="i"><use href="#i-bateria"/></svg></div><strong>Línea a batería</strong><span>Sin cables ni nafta</span></a>
+    <a class="cat" href="#"><div class="cat-img"><svg class="i"><use href="#i-tuerca"/></svg></div><strong>Repuestos y accesorios</strong><span>Cadenas, tanzas y aceites</span></a>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap"><div class="asesor">
+  <div><span class="eyebrow">Asesor Silvestre</span><h2>Elegí por tu terreno</h2><p>Contanos qué superficie tenés y te mostramos las máquinas que van. Si dudás, te asesoramos por WhatsApp.</p><a class="btn btn--wa" href="#"><svg class="i"><use href="#i-chat"/></svg>Consultar por WhatsApp</a></div>
+  <div class="terrenos">
+    <a class="terreno" href="#"><div class="terreno-ic"><svg class="i"><use href="#i-casa"/></svg></div><div><strong>Jardín de casa</strong><br><small>Hasta 500 m²</small></div><ul><li>Cortadoras eléctricas o a batería</li><li>Bordeadoras livianas</li><li>Tijeras de poda</li></ul><span class="go">Ver equipos <svg class="i"><use href="#i-flecha"/></svg></span></a>
+    <a class="terreno" href="#"><div class="terreno-ic"><svg class="i"><use href="#i-arbol"/></svg></div><div><strong>Parque o quinta</strong><br><small>500 a 3.000 m²</small></div><ul><li>Cortadoras a nafta con tracción</li><li>Desmalezadoras</li><li>Motosierras livianas</li></ul><span class="go">Ver equipos <svg class="i"><use href="#i-flecha"/></svg></span></a>
+    <a class="terreno" href="#"><div class="terreno-ic"><svg class="i"><use href="#i-vid"/></svg></div><div><strong>Finca o campo</strong><br><small>Más de 3.000 m²</small></div><ul><li>Tractores de jardín</li><li>Desmalezadoras profesionales</li><li>Motosierras y motobombas</li></ul><span class="go">Ver equipos <svg class="i"><use href="#i-flecha"/></svg></span></a>
+  </div>
+</div></div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">Más vendidos</span><h2>Lo que más se llevan</h2></div><a href="#">Ver todos <svg class="i"><use href="#i-flecha"/></svg></a></div>
+  <div class="prods">
+    <a class="card" href="#"><div class="card-img"><div class="tags"><span class="tag t-of">15% OFF</span></div><span class="fav"><svg class="i"><use href="#i-corazon"/></svg></span><img src="{{MS162}}" alt=""></div>
+      <div class="card-body"><span class="c-marca">STIHL</span><span class="c-nom">Motosierra STIHL MS 162, espada 30 cm</span><div class="c-pre"><b>$ 389.900</b><s>$ 458.700</s></div><span class="c-cuo">6 cuotas sin interés de $ 64.983</span><span class="btn c-add">Agregar<span class="hide-sm">&nbsp;al carrito</span></span></div></a>
+    <a class="card" href="#"><div class="card-img"><div class="tags"><span class="tag t-en"><svg class="i"><use href="#i-camion"/></svg>Envío gratis</span></div><span class="fav"><svg class="i"><use href="#i-corazon"/></svg></span><img src="{{FS}}" alt=""></div>
+      <div class="card-body"><span class="c-marca">STIHL</span><span class="c-nom">Desmalezadora a nafta STIHL</span><div class="c-pre"><b>$ 712.000</b></div><span class="c-cuo">6 cuotas sin interés de $ 118.667</span><span class="btn c-add">Agregar<span class="hide-sm">&nbsp;al carrito</span></span></div></a>
+    <a class="card" href="#"><div class="card-img"><div class="tags"><span class="tag t-mo"><svg class="i"><use href="#i-rayo"/></svg>Eléctrica</span></div><span class="fav"><svg class="i"><use href="#i-corazon"/></svg></span><img src="{{MSE141}}" alt=""></div>
+      <div class="card-body"><span class="c-marca">STIHL</span><span class="c-nom">Motosierra eléctrica STIHL MSE 141, 1400 W</span><div class="c-pre"><b>$ 289.900</b></div><span class="c-cuo">6 cuotas sin interés de $ 48.317</span><span class="btn c-add">Agregar<span class="hide-sm">&nbsp;al carrito</span></span></div></a>
+    <a class="card" href="#"><div class="card-img"><div class="tags"><span class="tag t-mo"><svg class="i"><use href="#i-rayo"/></svg>Eléctrico</span></div><span class="fav"><svg class="i"><use href="#i-corazon"/></svg></span><img src="{{HSE61}}" alt=""></div>
+      <div class="card-body"><span class="c-marca">STIHL</span><span class="c-nom">Cortacerco eléctrico STIHL HSE 61</span><div class="c-pre"><b>$ 254.500</b></div><span class="c-cuo">3 cuotas sin interés de $ 84.833</span><span class="btn c-add">Agregar<span class="hide-sm">&nbsp;al carrito</span></span></div></a>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap"><div class="bateria">
+  <div class="bateria-txt"><span class="eyebrow">Línea eléctrica y a batería</span><h2>Livianas, silenciosas y sin nafta.</h2><p>Para el jardín de casa: arrancan con un botón, no necesitan mezcla y casi no hacen ruido.</p>
+    <div class="bateria-bullets"><span><svg class="i"><use href="#i-rayo"/></svg>Arranque con un botón</span><span><svg class="i"><use href="#i-escudo"/></svg>Garantía oficial</span></div>
+    <a class="btn btn--dark" href="#">Ver la línea <svg class="i"><use href="#i-flecha"/></svg></a></div>
+  <div class="bateria-art"><div class="disco"><img src="{{BGE71}}" alt=""></div></div>
+</div></div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="sec-head"><div><span class="eyebrow">Marcas</span><h2>Trabajamos con las mejores</h2></div><a href="#">Ver marcas <svg class="i"><use href="#i-flecha"/></svg></a></div>
+  <div class="marcas">{{MARCAS}}</div>
+</div></section>
+
+<section class="sec"><div class="wrap servicio">
+  <div class="serv-card sc-dark"><span class="eyebrow">Repuestos y servicio</span><h3>No te dejamos solo después de la compra.</h3><p>Repuestos originales, cadenas, tanzas y aceites para que tu máquina rinda años. Consultanos por el mantenimiento.</p><a class="btn btn--light" href="#">Ver repuestos <svg class="i"><use href="#i-flecha"/></svg></a></div>
+  <div class="serv-card sc-photo" style="background-image:url({{BOSQUEKIT}})"><span class="eyebrow">Nuestro local</span><h3>Vení a conocernos a Maipú.</h3><p>Probá las máquinas, retirá tu compra sin costo y hablá con quien las conoce.</p>
+    <div class="direccion"><svg class="i"><use href="#i-pin"/></svg>Tropero Sosa 175, Maipú, Mendoza</div>
+    <div class="direccion" style="margin-top:0"><svg class="i"><use href="#i-reloj"/></svg>Lunes a viernes de 9 a 18 · Sábados de 9 a 13</div></div>
+</div></section>
+</main>
+
+<section class="news"><div class="wrap">
+  <div><h3>Recibí ofertas y novedades</h3><p>Una vez por mes, sin spam.</p></div>
+  <form onsubmit="event.preventDefault()"><input id="mail" type="email" placeholder="Tu mail" aria-label="Tu mail"><button class="btn" type="submit">Suscribirme</button></form>
+</div></section>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div><img class="foot-logo" src="{{LOGOB}}" alt="Silvestre máquinas y jardines"><p style="margin:0;max-width:300px">Máquinas y herramientas para jardín y campo. Distribuidor oficial STIHL en Maipú, Mendoza.</p><div class="pagos"><span>Mercado Pago</span><span>Visa</span><span>Mastercard</span><span>Transferencia</span></div></div>
+    <div><h4>Categorías</h4><ul><li><a href="#">Corte de césped</a></li><li><a href="#">Motosierras y poda</a></li><li><a href="#">Línea a batería</a></li><li><a href="#">Repuestos</a></li></ul></div>
+    <div><h4>Ayuda</h4><ul><li><a href="#">Cómo comprar</a></li><li><a href="#">Envíos</a></li><li><a href="#">Cambios y devoluciones</a></li><li><a href="#">Garantía</a></li></ul></div>
+    <div><h4>Contacto</h4><ul class="foot-contact"><li><svg class="i"><use href="#i-chat"/></svg>(261) 242-6888</li><li><svg class="i"><use href="#i-pin"/></svg>Tropero Sosa 175, Maipú</li><li><svg class="i"><use href="#i-reloj"/></svg>Lun a vie 9 a 18 · Sáb 9 a 13</li></ul></div>
+  </div>
+  <div class="foot-legal"><div class="wrap"><span>© 2026 Silvestre Máquinas y Jardines · CUIT 20-34853967-2</span><span><a href="#">Defensa de las y los consumidores</a> · <a href="#">Botón de arrepentimiento</a></span></div></div>
+</footer>
+
+<a class="wa-float" href="#"><svg class="i"><use href="#i-chat"/></svg><span>¿Te asesoramos?</span></a>
+</body>
+</html>

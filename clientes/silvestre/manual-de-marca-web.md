@@ -2,7 +2,9 @@
 
 > Guía para desarrollar la tienda nueva en Tiendanube, más pensada para vender online, y para que todo se vea y hable igual: web, Mercado Libre, redes y WhatsApp.
 >
-> **v1.0, 26/10/2026.** Hecho a partir de capturas de [silvestre.com.ar](https://www.silvestre.com.ar/) (portada, listado de productos y contacto) y de la lista de marcas que pasó el cliente. Los colores se midieron sobre esas capturas. Hay que confirmarlos con el archivo original del logo cuando lo tengamos.
+> **v2.0, 26/10/2026.** Basado en el **kit de marca del cliente** (`SV - Kit de MARCA`, marzo 2024: logo, colores y tipografías), en capturas de [silvestre.com.ar](https://www.silvestre.com.ar/) y en la lista de marcas que pasó el cliente.
+>
+> Versión visual: [`marca/silvestre-manual-de-marca.pdf`](marca/silvestre-manual-de-marca.pdf). Logos en vector: [`marca/logos/`](marca/logos/). Maqueta de la portada de la tienda: [`web/portada-prototipo.html`](web/portada-prototipo.html).
 >
 > Las variables para el desarrollo están en [`marca/silvestre-tokens.css`](marca/silvestre-tokens.css).
 
@@ -11,12 +13,12 @@
 | Elemento | Valor |
 |---|---|
 | Nombre | **Silvestre** (bajada: *máquinas y jardines*) |
-| Naranja Silvestre | `#F29100`: logo, barra superior, acentos |
-| Verde Silvestre | `#3AAA35`: rama del logo, íconos, detalles |
+| Naranja Silvestre | `#F29100`: color principal del kit. Logo (SIL y TRE), ofertas, acentos |
+| Verde Silvestre | `#39A935`: color principal del kit. Logo (VES, rama y bajada), íconos |
 | Verde acción | `#2E7D32`: botones y links (texto blanco encima) |
-| Verde claro | `#EAF9C6`: pie de página y secciones de apoyo |
+| Verde claro | `#EAF9C7`: secundario del kit. Secciones de apoyo |
 | Texto | `#1A1A1A` |
-| Tipografía | **Nunito** para títulos, **Nunito Sans** para textos *(propuesta)* |
+| Tipografía | Del kit: **Harabara Mais** (marca) y **Helvetica LT Std** (secundaria). En la web: **Montserrat** para títulos y Helvetica para textos |
 | Voz | Especialista de mostrador: claro, práctico, de confianza |
 
 ---
@@ -26,7 +28,7 @@
 **Mantener:**
 
 - El **logo** y sus dos colores, naranja y verde. Son reconocibles y conectan con el rubro.
-- La **barra superior naranja** con envíos y retiro en Maipú.
+- La **barra superior** con envíos y retiro en Maipú (pasa a fondo oscuro con íconos naranja, para que se lea).
 - El **pie de página verde claro**: es amable y separa bien el cierre de la página.
 - El **botón de WhatsApp** fijo abajo a la derecha.
 - La frase *"Somos distribuidores oficiales STIHL y especialistas en máquinas y herramientas para jardín y campo"*. Es el mejor texto de la web y tiene que subir de jerarquía.
@@ -64,41 +66,48 @@
 
 ## 3. Logo
 
-**Cómo es:** la palabra **"silvestre"** en minúscula, letra redondeada y gruesa, en **naranja**. A la derecha, una **rama verde** que la cierra como un paréntesis. Debajo, alineada a la derecha, la bajada **"máquinas y jardines"** en verde.
+**Cómo es:** la palabra **silvestre** en Harabara Mais, partida por color: **SIL** y **TRE** en naranja `#F29100`, **VES** en verde `#39A935`. A la derecha, una **rama verde** que la cierra como un paréntesis. Debajo, la bajada **máquinas y jardines** en verde. El kit trae dos versiones: **horizontal** y **apilada** (SIL / VES / TRE).
 
-**Versiones que hay que pedir o armar:**
+**Versiones** (en vector en [`marca/logos/`](marca/logos/), sacadas del kit):
 
-| Versión | Uso | Estado |
+| Versión | Archivo | Uso |
 |---|---|---|
-| Color (naranja y verde) | Encabezado, pie, documentos | Pedir en vector (SVG, AI o PDF) |
-| Blanco | Sobre fotos y fondos oscuros | Armar |
-| Una tinta oscura `#1A1A1A` | Facturas, sellos, usos de un color | Armar |
-| Ícono: la rama sola, o una "s" naranja con la rama | Favicon, perfil de Mercado Libre, Instagram y WhatsApp | Armar |
+| Horizontal color | `logo-horizontal.svg` | Encabezado de la web, documentos, Mercado Libre |
+| Apilada color | `logo-apilado.svg` | Espacios cuadrados: perfil de redes, ícono de la tienda |
+| Blanco | `logo-horizontal-blanco.svg`, `logo-apilado-blanco.svg` | Sobre fotos y sobre verde oscuro (como en la portada del kit) |
+| Una tinta | `logo-horizontal-negro.svg`, `logo-apilado-negro.svg` | Facturas, sellos, usos de un solo color |
 
 **Reglas:**
 
-- **Fondos permitidos:** blanco, verde claro `#EAF9C6` y fotos con una zona limpia. Nunca sobre naranja: el logo desaparece.
+- **Fondos permitidos:** el logo color va sobre blanco, arena o verde claro `#EAF9C7`. Sobre fotos o verde oscuro va la versión blanca. Nunca el logo color sobre naranja ni sobre fotos: se pierden SIL y TRE.
 - **Área de respeto:** alrededor del logo, un espacio libre igual al alto de la letra "s".
 - **Tamaño mínimo:** 140 px de ancho con bajada, 100 px sin bajada. Debajo de 140 px la bajada no se lee: usar la versión sin bajada.
-- **En el encabezado:** entre 160 y 220 px de ancho en computadora y entre 120 y 140 px en celular, siempre centrado como hoy.
+- **En el encabezado:** 200 px de ancho en computadora y entre 120 y 140 px en celular. En la tienda nueva va a la izquierda, con el buscador al centro (ver la maqueta).
 - **No:** estirar, rotar, cambiar los colores, separar la rama de la palabra, agregar sombras o contornos, ni escribir "Silvestre" con otra letra en lugar del logo.
 
 ## 4. Colores
 
-### De marca (salen del logo)
+### De marca (kit oficial)
 
 | Nombre | Hex | RGB | Uso |
 |---|---|---|---|
-| **Naranja Silvestre** | `#F29100` | 242, 145, 0 | Logo, barra superior, etiquetas de oferta, detalles |
-| **Verde Silvestre** | `#3AAA35` | 58, 170, 53 | Rama del logo, íconos, estado "en stock" |
+| **Verde Silvestre** | `#39A935` | 57, 169, 53 | Principal. Logo, íconos grandes, estado en stock |
+| **Naranja Silvestre** | `#F29100` | 242, 145, 0 | Principal. Logo, etiquetas de oferta, promos de temporada |
+| Salvia | `#559E72` | 85, 158, 114 | Secundario. Detalles gráficos |
+| Menta | `#93E98B` | 147, 233, 139 | Secundario. Ilustraciones y fondos de piezas gráficas |
+| Verde claro | `#EAF9C7` | 234, 249, 199 | Secundario. Secciones de apoyo, etiqueta de envío gratis |
+| Terracota | `#C16F1E` | 193, 111, 30 | Secundario. Acentos cálidos en piezas gráficas |
+| Durazno | `#FFAF8D` | 255, 175, 141 | Secundario. Fondos de piezas gráficas |
+| Rosa arena | `#FFCDBB` | 255, 205, 187 | Secundario. Fondos de piezas gráficas |
 
-### Para la interfaz (derivados, para que todo se lea bien)
+### Para la web (derivados del verde del kit, para que todo se lea bien)
 
 | Nombre | Hex | Uso |
 |---|---|---|
 | **Verde acción** | `#2E7D32` | Botones principales y links |
 | Verde acción, al pasar el mouse | `#1E5A23` | Estado *hover* de botones y links |
-| **Verde claro** | `#EAF9C6` | Pie de página, bloques de beneficios |
+| Verde noche | `#143D18` | Fondos oscuros: portada, bloques de servicio |
+| Arena | `#F7F6F2` | Fondos de tarjetas y secciones |
 | Naranja claro | `#FFF4E0` | Fondo de avisos y de la franja de cuotas |
 | Naranja para texto | `#A35500` | Si hace falta texto naranja sobre blanco (5,5:1) |
 
@@ -128,31 +137,36 @@
 | `#1A1A1A` sobre `#FFFFFF` | 17,4:1 | AAA |
 | `#1A1A1A` sobre `#F29100` (barra superior) | 7,3:1 | AAA |
 | Blanco sobre `#2E7D32` (botón) | 5,1:1 | AA |
-| `#1E5A23` sobre `#EAF9C6` (textos del pie) | 7,4:1 | AAA |
+| `#1E5A23` sobre `#EAF9C7` (textos del pie) | 7,4:1 | AAA |
 | `#5F6368` sobre `#FFFFFF` | 6,1:1 | AA |
 | Blanco sobre `#F29100` | 2,4:1 | **No usar** |
+| Blanco sobre `#39A935` | 3,0:1 | **No usar** en textos chicos |
+| Blanco sobre `#93E98B` | 1,5:1 | **No usar** |
 | Blanco sobre `#62C659` (botón actual) | 2,2:1 | **No usar** |
-| `#559D70` sobre `#EAF9C6` (textos del pie actual) | 2,9:1 | **No usar** |
+| `#559E72` sobre `#EAF9C7` (textos del pie actual) | 2,9:1 | **No usar** |
 
-## 5. Tipografía *(propuesta)*
+## 5. Tipografía
 
-El logo es redondeado y amable. Para acompañarlo sin copiarlo:
+Del kit de marca:
 
-- **Títulos:** **Nunito**, peso 700 u 800. Redondeada como el logo.
-- **Textos, precios y botones:** **Nunito Sans**, peso 400 y 600. Muy legible en celular y con buenos números.
+- **Harabara Mais** (tipografía de marca): logo, títulos de campaña y piezas gráficas. **Ojo:** el kit usa la versión *Demo*, que no habilita uso comercial. Hay que comprar la licencia completa (y la licencia web si se quiere usar en la tienda).
+- **Helvetica LT Std** (secundaria, en todas sus variantes): textos, precios y datos. Es una fuente paga; en la web se usa la Helvetica del sistema con Arial de respaldo.
 
-Las dos son de Google Fonts. Si la plantilla de Tiendanube no las ofrece en su lista, se cargan por CSS (ver sección 13).
+En la web, mientras no haya licencia web de Harabara:
+
+- **Títulos:** **Montserrat**, peso 700 u 800. Es la que el kit usa para rótulos y es gratuita en Google Fonts.
+- **Textos, precios y botones:** `"Helvetica Neue", Helvetica, Arial, sans-serif`.
 
 | Elemento | Computadora | Celular | Peso |
 |---|---|---|---|
-| Título de portada (H1) | 40 px | 28 px | Nunito 800 |
-| Título de sección (H2) | 28 px | 22 px | Nunito 700 |
-| Título de ficha de producto | 26 px | 20 px | Nunito 700 |
-| Nombre en tarjeta de producto | 16 px | 15 px | Nunito Sans 600 |
-| Precio en tarjeta | 20 px | 18 px | Nunito Sans 700 |
-| Precio en ficha | 32 px | 26 px | Nunito Sans 700 |
-| Texto | 16 px | 16 px | Nunito Sans 400 |
-| Datos chicos (cuotas, envío) | 14 px | 13 px | Nunito Sans 400 |
+| Título de portada (H1) | 56 px | 36 px | Montserrat 800 |
+| Título de sección (H2) | 38 px | 28 px | Montserrat 800 |
+| Título de ficha de producto | 28 px | 22 px | Montserrat 800 |
+| Nombre en tarjeta de producto | 16 px | 15 px | Helvetica 600 |
+| Precio en tarjeta | 20 px | 18 px | Helvetica 700 |
+| Precio en ficha | 32 px | 26 px | Helvetica 700 |
+| Texto | 16 px | 16 px | Helvetica 400 |
+| Datos chicos (cuotas, envío) | 14 px | 13 px | Helvetica 400 |
 
 Interlineado de 1,5 en textos y de 1,2 en títulos. Títulos en **tipo oración** ("Motosierras a batería"), nunca todo en mayúscula.
 
@@ -160,14 +174,14 @@ Interlineado de 1,5 en textos y de 1,2 en títulos. Títulos en **tipo oración*
 
 ### Barra superior
 
-- Fondo naranja `#F29100`, texto `#1A1A1A` semibold de 13 a 14 px.
+- Fondo `#1A1A1A`, texto blanco semibold de 13 px e íconos en naranja `#F29100`. A la derecha, el teléfono de ayuda.
 - Máximo tres mensajes, separados por un punto medio: **Envíos a todo el país · Retiro en Maipú · Hasta X cuotas sin interés**.
 - En celular, un mensaje por vez, rotando.
 
 ### Encabezado
 
-- Como hoy: buscador a la izquierda, logo al centro, cuenta y carrito a la derecha.
-- **Buscador más visible**: en computadora, una caja de búsqueda abierta ("Buscá por máquina, marca o modelo"), no solo la lupa.
+- Logo a la izquierda, **buscador grande al centro** ("Buscá por máquina, marca o modelo") y, a la derecha, Asesoramiento, Mi cuenta y Carrito.
+- En celular: menú, logo centrado y carrito arriba, y el buscador a todo el ancho debajo.
 - Debajo, el **menú de categorías** (sección 10), con submenú al pasar el mouse.
 
 ### Portada (de arriba hacia abajo)
@@ -184,7 +198,7 @@ Interlineado de 1,5 en textos y de 1,2 en títulos. Títulos en **tipo oración*
 
 | Tipo | Fondo | Texto | Borde | Uso |
 |---|---|---|---|---|
-| Principal | `#2E7D32` (hover `#1E5A23`) | Blanco, Nunito Sans 600 | Ninguno | Comprar, Agregar al carrito, Ver productos |
+| Principal | `#2E7D32` (hover `#1E5A23`) | Blanco, Helvetica 600 | Ninguno | Comprar, Agregar al carrito, Ver productos |
 | Secundario | Transparente | `#2E7D32` | 2 px `#2E7D32` | Ver más, Ver ficha técnica |
 | WhatsApp | `#25D366` | `#1A1A1A` | Ninguno | Consultar por WhatsApp (color oficial de WhatsApp) |
 
@@ -196,7 +210,7 @@ Esquinas redondeadas de **8 px**, alto mínimo de **48 px** en celular para toca
 - **Marca** en chico (gris, mayúscula solo si la marca se escribe así), **nombre** debajo, **precio** grande, **cuotas** debajo en gris.
 - Etiquetas arriba a la izquierda, máximo dos:
   - **Oferta / % OFF:** fondo `#F29100`, texto `#1A1A1A`.
-  - **Envío gratis:** fondo `#EAF9C6`, texto `#1E5A23`.
+  - **Envío gratis:** fondo `#EAF9C7`, texto `#1E5A23`.
   - **A batería:** fondo `#F6F6F3`, texto `#1A1A1A`, con ícono de batería.
 - Sin stock: foto en gris al 50 % y el texto "Sin stock por ahora".
 
@@ -208,7 +222,8 @@ Esquinas redondeadas de **8 px**, alto mínimo de **48 px** en celular para toca
 
 ### Pie de página
 
-- Fondo verde claro `#EAF9C6`, textos `#1E5A23`.
+- Arriba, franja de newsletter en verde claro `#EAF9C7` con textos `#1E5A23`.
+- El pie en sí va en `#1A1A1A` con textos blancos al 78 % y el logo en versión blanca.
 - Columnas: **Categorías · Ayuda** (envíos, cambios, garantía, cómo comprar) **· Contacto · Seguinos**.
 - Contacto: (261) 242-6888 · mail de dominio propio · Tropero Sosa 175, Maipú, Mendoza · horarios · mapa.
 - Mantener lo legal: razón social y CUIT, Defensa del Consumidor y botón de arrepentimiento (es obligatorio).
@@ -341,15 +356,18 @@ El menú va **por uso**. La marca es un filtro y tiene su propia página.
 ## 13. Cómo aplicarlo en Tiendanube
 
 1. **Plantilla:** elegir una con encabezado centrado, menú desplegable por categorías, barra de anuncios y tarjetas de producto con precio y cuotas.
-2. **Personalizar diseño → Colores:** cargar fondo `#FFFFFF`, textos `#1A1A1A`, botones `#2E7D32` con texto blanco, barra de anuncios `#F29100` con texto `#1A1A1A`, y pie `#EAF9C6` con textos `#1E5A23`.
-3. **Personalizar diseño → Tipografía:** elegir Nunito para títulos y Nunito Sans para textos si están en la lista. Si no están, usar la más parecida (redondeada para títulos y una sans legible para textos) o cargarlas por CSS.
+2. **Personalizar diseño → Colores:** cargar fondo `#FFFFFF`, textos `#1A1A1A`, botones `#2E7D32` con texto blanco, barra de anuncios `#1A1A1A` con texto blanco, y pie `#1A1A1A` con el logo blanco.
+3. **Personalizar diseño → Tipografía:** elegir Montserrat para títulos y Helvetica (o Arial) para textos. Si hay licencia web de Harabara Mais, se puede cargar por CSS para los títulos.
 4. **CSS avanzado:** si el plan permite editar el CSS, pegar [`marca/silvestre-tokens.css`](marca/silvestre-tokens.css). Primero hay que mapear las variables a las clases de la plantilla elegida. Revisar en el plan del cliente si está disponible la edición de CSS.
 5. **Logo:** subir el SVG o un PNG de al menos 440 px de ancho (doble resolución). Favicon: el ícono cuadrado de 512 × 512 px.
 6. **Revisar en celular** antes de publicar: barra superior, menú, tarjeta de producto, ficha y checkout.
 
 ## Pendientes
 
-- [ ] Logo original en vector, para confirmar los colores `#F29100` y `#3AAA35`
+- [x] Logo original en vector y colores oficiales (vienen en el kit)
+- [ ] Licencia comercial de Harabara Mais (el kit usa la versión Demo)
+- [ ] Fotos en acción de las máquinas trabajando (ver la lista de tomas en el PDF)
+- [ ] Logos oficiales de cada marca, en vector
 - [ ] Armar las versiones blanca, una tinta e ícono
 - [ ] Confirmar las tipografías de la propuesta
 - [ ] Mail con dominio propio
