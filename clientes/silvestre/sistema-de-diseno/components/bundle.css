@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=Nunito+Sans:wght@400;600;700&display=swap");
+
+/* Silvestre: componentes de la tienda. Todos los valores salen de tokens.json. */
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--font-texto);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.sv-pad { padding: var(--space-4); }
+.sv-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; }
+
+:where(a, button, input):focus-visible {
+  outline: 2px solid var(--verde-accion-hover);
+  outline-offset: 2px;
+}
+
+.sv-icon { width: 24px; height: 24px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Barra superior */
+.sv-barra {
+  background: var(--naranja);
+  color: var(--texto);
+  font-family: var(--font-texto);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  text-align: center;
+  padding: var(--space-2) var(--space-4);
+}
+.sv-barra span + span::before { content: "·"; margin: 0 var(--space-3); }
+
+/* Encabezado */
+.sv-encabezado { background: var(--fondo); border-bottom: 1px solid var(--borde); }
+.sv-encabezado__fila {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+}
+.sv-encabezado__logo { width: var(--logo-encabezado); max-width: 100%; display: block; }
+.sv-buscador {
+  display: flex; align-items: center; gap: var(--space-2);
+  min-height: 40px; max-width: 280px;
+  padding: 0 var(--space-3);
+  border: 1px solid var(--texto-secundario);
+  border-radius: var(--radius-md);
+  color: var(--texto-secundario);
+  font-size: 14px;
+}
+.sv-encabezado__acciones { display: flex; justify-content: flex-end; gap: var(--space-4); color: var(--texto); }
+.sv-menu {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2) var(--space-6);
+  padding: 0 var(--space-4) var(--space-3);
+  font-weight: 600; font-size: 15px;
+}
+.sv-menu a { color: var(--texto); text-decoration: none; padding: var(--space-1) 0; border-bottom: 2px solid transparent; }
+.sv-menu a:hover, .sv-menu a[aria-current] { border-bottom-color: var(--verde-accion); }
+
+/* Botones */
+.sv-boton {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2);
+  min-height: var(--boton-alto);
+  padding: 0 var(--space-6);
+  border: 2px solid var(--verde-accion);
+  border-radius: var(--radius-md);
+  background: var(--verde-accion);
+  color: var(--sobre-accion);
+  font-family: var(--font-texto);
+  font-size: 16px; line-height: 20px; font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.sv-boton:hover { background: var(--verde-accion-hover); border-color: var(--verde-accion-hover); }
+.sv-boton--secundario { background: transparent; color: var(--verde-accion); }
+.sv-boton--secundario:hover { background: var(--verde-claro); color: var(--verde-accion-hover); }
+.sv-boton--whatsapp { background: var(--whatsapp); border-color: var(--whatsapp); color: var(--texto); }
+.sv-boton--whatsapp:hover { background: var(--whatsapp); border-color: var(--texto); }
+.sv-boton--ancho { width: 100%; }
+
+/* Etiquetas */
+.sv-etiqueta {
+  display: inline-flex; align-items: center; gap: var(--space-1);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: 12px; line-height: 16px; font-weight: 700;
+}
+.sv-etiqueta--oferta { background: var(--naranja); color: var(--texto); }
+.sv-etiqueta--envio { background: var(--verde-claro); color: var(--verde-accion-hover); }
+.sv-etiqueta--motor { background: var(--superficie); color: var(--texto); }
+.sv-etiqueta .sv-icon { width: 14px; height: 14px; stroke-width: 2; }
+
+/* Foto de producto (marcador de lugar) */
+.sv-foto {
+  position: relative;
+  aspect-ratio: 1;
+  max-width: 100%;
+  background: var(--fondo);
+  border-bottom: 1px solid var(--borde);
+  display: grid; place-items: center;
+  color: var(--texto-secundario);
+  font-size: 13px;
+}
+.sv-foto__silueta { width: 70%; height: auto; stroke: var(--borde); stroke-width: 3; fill: var(--superficie); }
+.sv-foto .sv-etiquetas { position: absolute; top: var(--space-2); left: var(--space-2); display: flex; gap: var(--space-1); flex-wrap: wrap; }
+
+/* Tarjeta de producto */
+.sv-tarjetas { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: var(--space-4); }
+.sv-tarjeta {
+  display: flex; flex-direction: column;
+  border: 1px solid var(--borde);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--fondo);
+  color: var(--texto);
+  text-decoration: none;
+}
+.sv-tarjeta:hover { box-shadow: 0 6px 18px rgba(26, 26, 26, 0.10); }
+.sv-tarjeta__info { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-3); }
+.sv-tarjeta__marca { color: var(--texto-secundario); font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.04em; }
+.sv-tarjeta__nombre { font-size: 16px; line-height: 22px; font-weight: 600; min-height: 44px; }
+.sv-tarjeta__precio { font-size: 20px; line-height: 24px; font-weight: 700; font-variant-numeric: tabular-nums; margin-top: var(--space-1); }
+.sv-tarjeta__antes { color: var(--texto-secundario); font-size: 14px; text-decoration: line-through; font-weight: 400; margin-left: var(--space-2); }
+.sv-tarjeta__cuotas { color: var(--texto-secundario); font-size: 14px; line-height: 20px; }
+.sv-tarjeta--sin-stock .sv-foto__silueta { opacity: 0.5; }
+.sv-tarjeta--sin-stock .sv-tarjeta__precio { color: var(--texto-secundario); }
+
+/* Caja de compra (ficha de producto) */
+.sv-compra { display: flex; flex-direction: column; gap: var(--space-3); max-width: 420px; }
+.sv-compra__marca { color: var(--texto-secundario); font-size: 14px; font-weight: 700; letter-spacing: 0.04em; }
+.sv-compra__titulo { margin: 0; font-family: var(--font-titulos); font-size: 26px; line-height: 32px; font-weight: 700; text-wrap: balance; }
+.sv-compra__precio { font-size: 32px; line-height: 38px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.sv-compra__dato { display: flex; gap: var(--space-2); align-items: center; font-size: 14px; line-height: 20px; color: var(--texto-secundario); }
+.sv-compra__dato strong { color: var(--texto); }
+.sv-compra__dato .sv-icon { color: var(--verde-accion); width: 20px; height: 20px; }
+.sv-sellos { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); padding-top: var(--space-3); border-top: 1px solid var(--borde); font-size: 13px; color: var(--texto-secundario); }
+.sv-sellos span { display: inline-flex; gap: var(--space-1); align-items: center; }
+.sv-sellos .sv-icon { width: 16px; height: 16px; color: var(--verde-accion); }
+
+/* Franja de beneficios */
+.sv-beneficios {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: var(--space-4);
+  background: var(--verde-claro);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+}
+.sv-beneficio { display: flex; gap: var(--space-3); align-items: flex-start; color: var(--verde-accion-hover); }
+.sv-beneficio .sv-icon { width: 28px; height: 28px; }
+.sv-beneficio strong { display: block; font-family: var(--font-titulos); font-size: 17px; line-height: 22px; color: var(--texto); }
+.sv-beneficio p { margin: 2px 0 0; font-size: 14px; line-height: 20px; }
+
+/* Pie de página */
+.sv-pie { background: var(--verde-claro); color: var(--verde-accion-hover); font-size: 14px; line-height: 20px; }
+.sv-pie__columnas { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--space-6); padding: var(--space-8) var(--space-6) var(--space-6); }
+.sv-pie h4 { margin: 0 0 var(--space-2); font-family: var(--font-titulos); font-size: 16px; color: var(--texto); }
+.sv-pie ul { margin: 0; padding: 0; list-style: none; display: grid; gap: var(--space-1); }
+.sv-pie a { color: var(--verde-accion-hover); }
+.sv-pie__legal { border-top: 1px solid rgba(30, 90, 35, 0.25); padding: var(--space-3) var(--space-6); font-size: 12px; line-height: 16px; }

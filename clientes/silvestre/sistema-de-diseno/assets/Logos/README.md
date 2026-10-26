@@ -1,0 +1,1 @@
+El logo de Silvestre: la palabra silvestre en `naranja` con la rama y la bajada en `verde`. `silvestre-logo-captura.png` está recortado de una captura de la web actual (276 × 80 px): sirve como referencia y para vistas previas, no para producción. Falta el original en vector.
